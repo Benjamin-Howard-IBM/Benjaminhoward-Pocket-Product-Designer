@@ -1,0 +1,8 @@
+Filter Category,Effort,Notes
+,,
+By Auth Method,,
+By Secret,,
+By Entity,,
+By Time Range,,"Requires a time-series database (e.g., Prometheus)."
+Organization,,
+Project,,

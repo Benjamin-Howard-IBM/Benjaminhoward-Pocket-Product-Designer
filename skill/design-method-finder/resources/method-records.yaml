@@ -1,0 +1,420 @@
+methods:
+  - id: pictive
+    name: PICTIVE
+    category: participatory_design
+    best_for: Co-designing interface concepts with users, designers, and stakeholders on equal footing.
+    use_when: Users should actively construct, rearrange, and critique rough UI ideas.
+    avoid_when: The decision requires production interaction detail, visual polish, or precise performance measurement.
+    uncertainty_types: [workflow, terminology, layout, stakeholder_alignment]
+    artifact_maturity: [no_artifact, concept, rough_sketch]
+    access_level: [live_target_users, proxy_users, smes]
+    participation_level: users_co_design_directly
+    fidelity: low
+    time_needed: 60-120m
+    remote_variant: Shared whiteboard with movable paper-like UI components, blank cards, markers, and scenario prompts.
+    steps: [frame_task, provide_component_kit, have_users_assemble_flow, discuss_rationale, revise_live, capture_decisions]
+    outputs: [annotated_layouts, task_flow, user_vocabulary, priority_signals, design_rationale]
+    risks: [dominant_voices, component_kit_can_constrain_thinking, messy_artifacts]
+    fallback_to: [co_creation_session, digital_paper_prototype]
+    upgrade_to: [participatory_prototyping, clickable_wireframe_test]
+    sources: [muller_pictive, participatory_design]
+
+  - id: bridge_method
+    name: The Bridge method
+    category: participatory_design
+    best_for: Translating field/work-practice evidence into shared design concepts and requirements.
+    use_when: Research insights need to become design direction with users and stakeholders involved.
+    avoid_when: There is no prior evidence about current work or the team only needs a quick UI critique.
+    uncertainty_types: [research_synthesis, concept_direction, current_to_future_workflow]
+    artifact_maturity: [research_notes, concept]
+    access_level: [live_target_users, smes, stakeholders]
+    participation_level: users_co_design_directly
+    fidelity: low
+    time_needed: half_day
+    remote_variant: Shared synthesis board with current-work evidence, scenarios, and rough concept sketching.
+    steps: [review_field_data, extract_work_models, build_scenarios, sketch_concepts, test_against_work, prioritize]
+    outputs: [themes, scenarios, work_models, concept_sketches, priorities]
+    risks: [weak_evidence_base, overgeneralization, stakeholder_power_dynamics]
+    fallback_to: [journey_mapping, task_analysis]
+    upgrade_to: [participatory_prototyping, service_blueprint]
+    sources: [dayton_bridge_method, participatory_design]
+
+  - id: bifocal_tools
+    name: Bifocal Tools
+    category: participatory_design
+    best_for: Examining current work and proposed future tools side by side.
+    use_when: The design must reveal transition risks, organizational impacts, or mismatches between current and future work.
+    avoid_when: The question is only about a narrow screen-level or visual choice.
+    uncertainty_types: [current_state, future_state, organizational_constraints, transition_risk]
+    artifact_maturity: [research_notes, concept, rough_sketch]
+    access_level: [smes, stakeholders, live_target_users]
+    participation_level: users_arrange_or_modify_artifacts
+    fidelity: low
+    time_needed: 90m-half_day
+    remote_variant: Split board with current-state artifacts on one side and future-state concepts on the other.
+    steps: [map_current_activity, map_future_tool, compare_gaps, identify_tensions, define_interventions]
+    outputs: [current_future_map, transition_risks, intervention_candidates]
+    risks: [scope_creep, abstract_mapping_without_decisions]
+    fallback_to: [journey_mapping, service_blueprint]
+    upgrade_to: [bridge_method, co_creation_session]
+    sources: [dayton_bifocal_tools, participatory_design]
+
+  - id: card
+    name: CARD
+    category: participatory_analysis
+    best_for: Letting participants arrange tasks, artifacts, roles, and handoffs into a workflow model.
+    use_when: Workflow sequence, task dependencies, or handoffs are unclear.
+    avoid_when: The issue is primarily brand perception, visual direction, or measured performance.
+    uncertainty_types: [task_sequence, handoffs, roles, objects]
+    artifact_maturity: [no_artifact, research_notes, concept]
+    access_level: [live_target_users, smes, stakeholders]
+    participation_level: users_arrange_or_modify_artifacts
+    fidelity: low
+    time_needed: 60-90m
+    remote_variant: Virtual cards in a shared whiteboard, sorted by actor, object, step, exception, and decision.
+    steps: [prepare_cards, arrange_flow, probe_exceptions, annotate_roles, mark_gaps, confirm_sequence]
+    outputs: [task_flow, role_map, object_map, exception_cases]
+    risks: [simplified_happy_path, missing_tacit_work]
+    fallback_to: [task_analysis]
+    upgrade_to: [task_object_design, paper_prototype]
+    sources: [card_method, participatory_design]
+
+  - id: task_object_design
+    name: Task-object design
+    category: interaction_modeling
+    best_for: Defining objects, actions, relationships, and states for complex tools.
+    use_when: The UI needs a stable conceptual model before screen design.
+    avoid_when: The problem is mostly content, persuasion, or visual styling.
+    uncertainty_types: [domain_model, object_model, task_structure, interaction_model]
+    artifact_maturity: [research_notes, concept]
+    access_level: [research_data, smes, designers]
+    participation_level: designers_with_sme_validation
+    fidelity: low
+    time_needed: 2-4h
+    remote_variant: Shared object/action model with validation comments from SMEs.
+    steps: [list_tasks, identify_objects, map_actions_to_objects, define_states, map_relationships, derive_screens]
+    outputs: [object_inventory, action_inventory, state_model, screen_implications]
+    risks: [model_too_abstract, missing_user_language]
+    fallback_to: [task_analysis, card]
+    upgrade_to: [paper_prototype, ooux]
+    sources: [dayton_task_object_design, ooux]
+
+  - id: paper_prototype
+    name: Paper prototype
+    category: prototyping
+    best_for: Testing task flow and comprehension before code or visual polish.
+    use_when: The concept is unstable and fast iteration matters.
+    avoid_when: The core risk is motion, performance, real data behavior, or production feasibility.
+    uncertainty_types: [flow, layout, comprehension, task_success]
+    artifact_maturity: [concept, rough_sketch]
+    access_level: [live_target_users, proxy_users]
+    participation_level: users_critique_or_test
+    fidelity: low
+    time_needed: 60-120m
+    remote_variant: Camera-over-paper, photographed sketches, tablet sketching, or whiteboard frames.
+    steps: [sketch_screens, assign_human_computer, run_task, swap_screens, note_breakdowns, revise]
+    outputs: [tested_flow, issue_list, revised_sketches]
+    risks: [users_react_to_roughness, limited_realism]
+    fallback_to: [task_analysis, cognitive_walkthrough]
+    upgrade_to: [digital_paper_prototype, clickable_wireframe_test]
+    sources: [paper_prototyping, usability_testing]
+
+  - id: digital_paper_prototype
+    name: Digital paper prototype
+    category: prototyping
+    best_for: Remote low-fidelity flow testing or co-design using rough digital frames.
+    use_when: Paper-prototype speed is needed but participants are remote.
+    avoid_when: Visual fidelity will bias stakeholder approval or make users think the design is final.
+    uncertainty_types: [flow, information_architecture, comprehension, collaboration]
+    artifact_maturity: [rough_sketch, structural_wireframe]
+    access_level: [live_target_users, proxy_users, stakeholders]
+    participation_level: users_critique_or_modify
+    fidelity: low
+    time_needed: 2-6h
+    remote_variant: Native method using FigJam, Miro, Mural, Figma wireframes, slides, or Storybook wireframes.
+    steps: [build_rough_frames, link_key_paths, run_scenario, invite_edits, collect_breakdowns, iterate]
+    outputs: [rough_clickable_flow, task_notes, revised_structure]
+    risks: [false_sense_of_completeness, tool_friction]
+    fallback_to: [paper_prototype, scenario_walkthrough]
+    upgrade_to: [participatory_prototyping, clickable_prototype_test]
+    sources: [rapid_prototyping, remote_usability]
+
+  - id: participatory_prototyping
+    name: Participatory prototyping
+    category: participatory_design
+    best_for: Letting users and stakeholders modify or construct prototype behavior together.
+    use_when: User agency, local workarounds, and contested workflows matter.
+    avoid_when: Security, compliance, or power dynamics make open-ended exploration unsafe.
+    uncertainty_types: [workflow_fit, user_priorities, local_adaptation]
+    artifact_maturity: [concept, rough_sketch, structural_wireframe]
+    access_level: [live_target_users, smes, stakeholders]
+    participation_level: users_co_design_directly
+    fidelity: low_to_medium
+    time_needed: half_day
+    remote_variant: Shared editable prototype or board with a moderated scenario run.
+    steps: [present_seed, invite_edits, discuss_tradeoffs, run_scenario, revise, decide_next_test]
+    outputs: [co_created_prototype, rationale, priority_changes]
+    risks: [unbuildable_suggestions, groupthink, consensus_theater]
+    fallback_to: [pictive, co_creation_session]
+    upgrade_to: [wizard_of_oz, functional_prototype]
+    sources: [participatory_design, prototyping]
+
+  - id: wizard_of_oz
+    name: Wizard of Oz
+    category: prototyping
+    best_for: Testing automated, AI, or expensive system behavior before building it.
+    use_when: System response logic, trust, or timing is uncertain.
+    avoid_when: Deception would violate consent, policy, or trust.
+    uncertainty_types: [automation_value, response_quality, user_trust, interaction_timing]
+    artifact_maturity: [prototype, structural_wireframe]
+    access_level: [live_target_users, proxy_users]
+    participation_level: users_test_with_facilitator
+    fidelity: medium
+    time_needed: 1-3d
+    remote_variant: Human operator manually drives chatbot, workflow, backend response, or recommendation behavior.
+    steps: [define_illusion, script_wizard_controls, brief_ethically, run_tasks, log_reactions, extract_requirements]
+    outputs: [behavior_requirements, trust_issues, response_patterns]
+    risks: [ethical_concerns, inconsistent_wizard_behavior]
+    fallback_to: [paper_prototype, role_play]
+    upgrade_to: [functional_prototype]
+    sources: [wizard_of_oz, hci_prototyping]
+
+  - id: contextual_inquiry
+    name: Contextual inquiry
+    category: field_research
+    best_for: Understanding real work, tools, constraints, and tacit knowledge in context.
+    use_when: Current practice is unknown or likely different from stakeholder descriptions.
+    avoid_when: Access to the real context is impossible, unsafe, or privacy-prohibitive.
+    uncertainty_types: [context, workflow, tools, constraints, tacit_knowledge]
+    artifact_maturity: [no_artifact, research_notes]
+    access_level: [live_target_users]
+    participation_level: observe_and_interview
+    fidelity: real_world
+    time_needed: 1-2h_per_participant
+    remote_variant: Screen-share observation, artifact walkthrough, or remote shadowing.
+    steps: [observe_work, ask_in_context_questions, capture_artifacts, verify_interpretation]
+    outputs: [field_notes, workflow_observations, pain_points, artifacts]
+    risks: [observer_effect, privacy_constraints]
+    fallback_to: [diary_study, stakeholder_interview]
+    upgrade_to: [bridge_method, journey_mapping]
+    sources: [contextual_inquiry, field_research]
+
+  - id: cultural_probes
+    name: Cultural probes
+    category: generative_research
+    best_for: Eliciting values, emotions, routines, aspirations, and lived context.
+    use_when: The design space is ambiguous and inspirational data matters.
+    avoid_when: Precise task measurement or usability diagnosis is needed.
+    uncertainty_types: [values, emotions, routines, context, aspirations]
+    artifact_maturity: [no_artifact, research_notes]
+    access_level: [async_target_users]
+    participation_level: users_self_document
+    fidelity: real_world
+    time_needed: 1-2w
+    remote_variant: Digital prompts, photos, voice notes, short journals, maps, or async activities.
+    steps: [design_prompts, distribute_kit, collect_responses, interpret_patterns, follow_up]
+    outputs: [probe_responses, themes, opportunity_areas]
+    risks: [low_completion, interpretive_ambiguity]
+    fallback_to: [diary_study, interview]
+    upgrade_to: [co_creation_session]
+    sources: [cultural_probes, generative_research]
+
+  - id: diary_study
+    name: Diary study
+    category: longitudinal_research
+    best_for: Tracking behavior, triggers, needs, and context over time.
+    use_when: Behavior varies by day, event, or context and cannot be captured in one session.
+    avoid_when: Immediate usability feedback is enough.
+    uncertainty_types: [frequency, triggers, context_variation, longitudinal_behavior]
+    artifact_maturity: [no_artifact, live_product]
+    access_level: [async_target_users]
+    participation_level: users_self_document
+    fidelity: real_world
+    time_needed: 3-14d
+    remote_variant: Forms, chat, shared docs, mobile prompts, or lightweight diary apps.
+    steps: [define_prompts, onboard_participants, collect_entries, remind, synthesize_patterns]
+    outputs: [timeline_data, recurring_needs, trigger_map]
+    risks: [participant_fatigue, self_report_bias]
+    fallback_to: [contextual_inquiry, interview]
+    upgrade_to: [journey_mapping]
+    sources: [diary_studies, ux_research]
+
+  - id: journey_mapping
+    name: Journey mapping
+    category: synthesis
+    best_for: Visualizing an end-to-end user experience across steps, channels, and emotions.
+    use_when: Pain points span multiple moments or teams.
+    avoid_when: Only one isolated interaction needs fixing.
+    uncertainty_types: [end_to_end_flow, emotions, pain_points, channels]
+    artifact_maturity: [research_notes, concept]
+    access_level: [research_data, stakeholders, smes]
+    participation_level: collaborative_synthesis
+    fidelity: low
+    time_needed: 2-4h
+    remote_variant: Collaborative journey-map board with evidence snippets and assumptions marked.
+    steps: [define_persona_scenario, map_stages, add_actions_thoughts_pain_points, mark_evidence, identify_opportunities]
+    outputs: [journey_map, opportunity_list, research_gaps]
+    risks: [invented_data, overbroad_stages, decorative_map]
+    fallback_to: [task_analysis]
+    upgrade_to: [service_blueprint, bridge_method]
+    sources: [journey_mapping, service_design]
+
+  - id: service_blueprint
+    name: Service blueprint
+    category: service_design
+    best_for: Mapping frontstage, backstage, systems, policies, and handoffs.
+    use_when: User experience depends on operations or multiple teams.
+    avoid_when: The product is a single self-contained UI flow.
+    uncertainty_types: [service_dependencies, handoffs, backstage_process, operational_risk]
+    artifact_maturity: [concept, planning]
+    access_level: [stakeholders, smes]
+    participation_level: collaborative_mapping
+    fidelity: low
+    time_needed: half_day
+    remote_variant: Layered blueprint in a shared whiteboard.
+    steps: [map_user_actions, add_frontstage, add_backstage, add_systems, mark_failure_points, assign_owners]
+    outputs: [service_blueprint, dependency_map, failure_points]
+    risks: [too_much_detail, missing_owners]
+    fallback_to: [journey_mapping]
+    upgrade_to: [design_studio, operational_walkthrough]
+    sources: [service_blueprinting, service_design]
+
+  - id: task_analysis
+    name: Task analysis
+    category: analysis
+    best_for: Breaking user goals into tasks, steps, decisions, dependencies, and errors.
+    use_when: Interaction requirements or task sequence are unclear.
+    avoid_when: Emotional experience or brand perception is the main question.
+    uncertainty_types: [task_structure, decision_points, prerequisites, errors]
+    artifact_maturity: [no_artifact, research_notes]
+    access_level: [research_data, smes, stakeholders]
+    participation_level: designer_or_sme_analysis
+    fidelity: low
+    time_needed: 1-3h
+    remote_variant: SME interview plus shared task decomposition.
+    steps: [select_goal, list_subtasks, sequence_steps, identify_decisions_errors, validate]
+    outputs: [task_model, requirements, edge_cases]
+    risks: [overformalization, missing_context]
+    fallback_to: [contextual_inquiry]
+    upgrade_to: [card, cognitive_walkthrough]
+    sources: [task_analysis, human_factors]
+
+  - id: card_sorting
+    name: Card sorting
+    category: information_architecture
+    best_for: Discovering how users group and label information.
+    use_when: Navigation, categories, or terminology are uncertain.
+    avoid_when: Task flow or interaction behavior is the core risk.
+    uncertainty_types: [categorization, labels, mental_model, navigation]
+    artifact_maturity: [no_artifact, concept]
+    access_level: [live_target_users, async_target_users]
+    participation_level: users_arrange_or_modify_artifacts
+    fidelity: low
+    time_needed: 30-60m
+    remote_variant: Online card-sort tool or shared whiteboard with cards.
+    steps: [prepare_cards, choose_open_or_closed_sort, collect_groupings, analyze_clusters, review_labels]
+    outputs: [category_candidates, label_insights, similarity_clusters]
+    risks: [sample_bias, artificial_card_set]
+    fallback_to: [stakeholder_sort, content_audit]
+    upgrade_to: [tree_testing]
+    sources: [information_architecture, card_sorting]
+
+  - id: tree_testing
+    name: Tree testing
+    category: information_architecture
+    best_for: Validating findability in a proposed navigation structure without UI chrome.
+    use_when: IA labels and hierarchy need evidence.
+    avoid_when: Visual layout or detailed interaction behavior is the main uncertainty.
+    uncertainty_types: [findability, navigation, labeling, hierarchy]
+    artifact_maturity: [concept, structural_wireframe]
+    access_level: [live_target_users, async_target_users]
+    participation_level: users_test_tasks
+    fidelity: low
+    time_needed: 30-60m
+    remote_variant: Online tree test.
+    steps: [define_tree, create_find_tasks, run_test, measure_success_path_time, revise_ia]
+    outputs: [success_rates, path_analysis, ia_issues]
+    risks: [task_wording_bias, ignores_visual_cues]
+    fallback_to: [card_sorting]
+    upgrade_to: [digital_paper_prototype]
+    sources: [information_architecture, tree_testing]
+
+  - id: design_studio
+    name: Design studio
+    category: ideation
+    best_for: Rapidly generating, critiquing, and converging on multiple solution directions.
+    use_when: The team needs divergent concepts and shared rationale quickly.
+    avoid_when: Domain evidence is weak and the workshop would only generate guesses.
+    uncertainty_types: [solution_space, alignment, concept_options]
+    artifact_maturity: [research_notes, concept]
+    access_level: [design_team, stakeholders, smes]
+    participation_level: collaborative_sketching
+    fidelity: low
+    time_needed: 2-4h
+    remote_variant: Timed sketching and critique in a shared whiteboard.
+    steps: [frame_problem, sketch_individually, present, critique, converge, refine]
+    outputs: [concept_sketches, decision_rationale, selected_direction]
+    risks: [loudest_voice_wins, premature_convergence]
+    fallback_to: [journey_mapping]
+    upgrade_to: [paper_prototype]
+    sources: [design_studio, lean_ux]
+
+  - id: co_creation_session
+    name: Co-creation session
+    category: participatory_design
+    best_for: Aligning users, stakeholders, and designers around opportunities and solution directions.
+    use_when: Ownership, lived experience, and shared vocabulary matter.
+    avoid_when: Confidential strategy or tightly constrained implementation dominates.
+    uncertainty_types: [priorities, language, workflow_fit, stakeholder_alignment]
+    artifact_maturity: [research_notes, concept]
+    access_level: [live_target_users, stakeholders, smes]
+    participation_level: users_co_design_directly
+    fidelity: low
+    time_needed: 2-4h
+    remote_variant: Facilitated workshop with structured prompts, individual work, clustering, and prioritization.
+    steps: [set_frame, share_evidence, generate_ideas, cluster, prioritize, define_next_artifacts]
+    outputs: [prioritized_concepts, shared_vocabulary, decision_log]
+    risks: [performative_consensus, facilitation_burden]
+    fallback_to: [design_studio]
+    upgrade_to: [participatory_prototyping, pictive]
+    sources: [co_creation, participatory_design]
+
+  - id: heuristic_evaluation
+    name: Heuristic evaluation
+    category: expert_review
+    best_for: Finding usability issues quickly when an interface exists and user access is limited.
+    use_when: Expert review can reduce obvious usability risk before user testing.
+    avoid_when: Real user behavior evidence is required.
+    uncertainty_types: [usability_defects, consistency, feedback, error_prevention]
+    artifact_maturity: [structural_wireframe, clickable_prototype, coded_prototype, live_product]
+    access_level: [expert_reviewer]
+    participation_level: expert_review
+    fidelity: medium_to_high
+    time_needed: 1-3h
+    remote_variant: Async annotated review of screenshots, prototype, or live flow.
+    steps: [select_heuristics, inspect_flow, rate_severity, consolidate_findings, recommend_fixes]
+    outputs: [issue_list, severity_ratings, recommendations]
+    risks: [expert_bias, false_positives, no_behavioral_proof]
+    fallback_to: [cognitive_walkthrough]
+    upgrade_to: [moderated_usability_test]
+    sources: [nielsen_heuristics, expert_review]
+
+  - id: cognitive_walkthrough
+    name: Cognitive walkthrough
+    category: expert_review
+    best_for: Evaluating learnability of a task flow for first-time or unfamiliar users.
+    use_when: Onboarding, first-run, setup, or complex new workflows are risky.
+    avoid_when: Experienced-user efficiency or visual appeal is the main concern.
+    uncertainty_types: [learnability, task_success, user_expectations, feedback]
+    artifact_maturity: [task_flow, structural_wireframe, clickable_prototype, coded_prototype]
+    access_level: [expert_reviewer, smes]
+    participation_level: expert_or_sme_walkthrough
+    fidelity: medium
+    time_needed: 1-2h
+    remote_variant: Async or live task walkthrough with a question checklist.
+    steps: [define_user_task, walk_each_action, ask_expectation_visibility_feedback_questions, log_issues]
+    outputs: [learnability_issues, task_breakdowns, fix_recommendations]
+    risks: [assumed_user_knowledge, tedious_for_large_flows]
+    fallback_to: [task_analysis]
+    upgrade_to: [moderated_usability_test, digital_paper_prototype]
+    sources: [cognitive_walkthrough, usability_inspection]

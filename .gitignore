@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Build output
+storybook/storybook-static/
+showcase/dist/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Editor (project-local VS Code config; remove this line if you want to share workspace settings)
+.vscode/
+
+# Env files
+.env
+.env.local
+.env.*.local

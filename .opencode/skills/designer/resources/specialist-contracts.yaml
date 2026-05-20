@@ -1,0 +1,90 @@
+specialists:
+  design-method-finder:
+    packaged: true
+    owns:
+      - method recommendation
+      - workshop selection
+      - research technique selection
+      - prototype format selection
+      - participatory design method selection
+    route_when:
+      - user asks what design method to use
+      - user is stuck and asks what to do next
+      - user asks how to validate, workshop, research, co-design, or prototype
+    required_context:
+      - decision needed
+      - main uncertainty
+      - access to users or stakeholders
+      - artifact maturity
+      - time and fidelity constraints
+
+  product-designer:
+    packaged: true
+    owns:
+      - personas
+      - JTBD
+      - CUJ
+      - OOUX
+      - journey maps
+      - user flows
+      - IA and object models
+      - low-fidelity wireframes
+      - PDRs and UXDRs
+      - Storybook wireframe handoff
+    route_when:
+      - user asks for product UX structure
+      - macro UX structure is unresolved
+      - user asks for a concrete product design artifact
+    required_context:
+      - target user or assumed persona
+      - user job or task
+      - scope boundary
+      - current artifact
+      - acceptance gate
+
+  microinteractions-expert:
+    packaged: true
+    optional_module: micro
+    owns:
+      - triggers
+      - state transitions
+      - feedback timing
+      - validation behavior
+      - loading, success, warning, error, retry, undo, and recovery behavior
+      - focus, keyboard, screen reader, and reduced-motion behavior
+    route_when:
+      - user asks about interaction-level behavior
+      - user asks for a micro spec, micro critique, or micro copy
+      - macro flow exists and component behavior needs detail
+    required_context:
+      - surface or component
+      - user goal
+      - trigger
+      - constraints
+      - accessibility expectations
+
+  impeccable:
+    packaged: false
+    install: npx skills add pbakaus/impeccable
+    owns:
+      - visual craft
+      - production-grade UI
+      - frontend implementation aesthetics
+      - typography, color, layout, motion, and interaction craft
+    route_when:
+      - user asks for polished UI
+      - user asks for frontend implementation
+      - user asks to make a UI distinctive, beautiful, production-grade, or less generic
+      - structure is stable enough for visual execution
+
+  critique:
+    packaged: false
+    fallback: product-designer heuristic evaluation
+    owns:
+      - design evaluation
+      - severity-ranked findings
+      - strengths and risks
+      - actionable improvement recommendations
+    route_when:
+      - user asks to review, critique, evaluate, or score an existing artifact
+      - user provides a screenshot, wireframe, prototype, flow, spec, or described concept
