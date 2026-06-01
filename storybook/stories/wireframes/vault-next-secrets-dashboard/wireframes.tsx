@@ -447,11 +447,75 @@ function Header() {
   );
 }
 
-function PageHeading({ children }: { children: ReactNode }) {
+/* ── Carbon Button primitives (grayscale wireframe) ──────────── */
+
+const buttonBase: CSSProperties = {
+  height: 40,
+  padding: '0 16px',
+  border: 'none',
+  borderRadius: 0,
+  fontFamily: FONT_SANS,
+  fontSize: 14,
+  fontWeight: 400,
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 8,
+  cursor: 'default',
+  lineHeight: 1,
+};
+
+const primaryButtonStyle: CSSProperties = {
+  ...buttonBase,
+  background: C.textPrimary,
+  color: C.inverseText,
+};
+
+const secondaryButtonStyle: CSSProperties = {
+  ...buttonBase,
+  background: 'transparent',
+  color: C.textPrimary,
+  border: `1px solid ${C.textPrimary}`,
+  height: 38, // -2 to compensate for border so visual rhythm matches primary
+};
+
+function PrimaryButton({ children }: { children: ReactNode }) {
+  return <button style={primaryButtonStyle}>{children}</button>;
+}
+
+function SecondaryButton({ children }: { children: ReactNode }) {
+  return <button style={secondaryButtonStyle}>{children}</button>;
+}
+
+function PageHeading({ children, actions }: { children: ReactNode; actions?: ReactNode }) {
   return (
     <>
       <div style={breadcrumbStyle}>Organization: acme-corp / Secrets</div>
-      <h1 style={pageTitleStyle}>{children}</h1>
+      <div style={{
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'space-between',
+        gap: 16,
+        margin: '0 0 24px',
+      }}>
+        <h1 style={{ ...pageTitleStyle, margin: 0 }}>{children}</h1>
+        {actions && (
+          <div style={{ display: 'flex', gap: 1, flexShrink: 0 }}>
+            {actions}
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+
+/* Standard action set for the Secrets dashboard.
+   Order intent: Carbon places primary action rightmost so it sits closest
+   to the user's typical mouse-resting position on a wide screen. */
+function SecretsHeaderActions() {
+  return (
+    <>
+      <SecondaryButton>Create secret store</SecondaryButton>
+      <PrimaryButton>Create secret</PrimaryButton>
     </>
   );
 }
@@ -511,7 +575,7 @@ export function SecretsDashboardDay0() {
       <div style={bodyStyle}>
         <SideNav section="secrets" />
         <main style={mainStyle}>
-          <PageHeading>Secrets dashboard</PageHeading>
+          <PageHeading actions={<SecretsHeaderActions />}>Secrets dashboard</PageHeading>
 
           {/* Filter bar */}
           <div style={filterBarStyle}>
@@ -622,7 +686,7 @@ export function SecretsDashboardDay1() {
       <div style={bodyStyle}>
         <SideNav section="secrets" />
         <main style={mainStyle}>
-          <PageHeading>Secrets dashboard</PageHeading>
+          <PageHeading actions={<SecretsHeaderActions />}>Secrets dashboard</PageHeading>
 
           <div style={filterBarStyle}>
             <Dropdown label="Org" value="acme-corp" />

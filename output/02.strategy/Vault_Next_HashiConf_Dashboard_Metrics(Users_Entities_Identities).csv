@@ -1,8 +1,0 @@
-Metric Name,Effort,Notes
-# Stores,,
-"? by status (available, unavailable)",,
-# Clients,,
-"? by type (human, NHI, agent)",,
-# Auth methods,,
-"? # ""accounts"" per method",,
-? user mapping,,

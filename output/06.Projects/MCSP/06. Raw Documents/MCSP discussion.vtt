@@ -1,0 +1,1799 @@
+WEBVTT
+
+515f3120-5e31-4772-9ae8-6edc3a303801/5-0
+00:00:03.445 --> 00:00:04.245
+<v Benjamin Howard>back up.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/6-0
+00:00:07.045 --> 00:00:07.845
+<v Benjamin Howard>K.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/7-0
+00:00:09.445 --> 00:00:11.974
+<v Sara Snowden>I wish there could just be a blanket
+acceptance,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/7-1
+00:00:11.974 --> 00:00:14.245
+<v Sara Snowden>like you do it once a week or once a
+month.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/9-0
+00:00:15.125 --> 00:00:19.093
+<v Benjamin Howard>Right? I don't know why it does that.
+And it's just like everybody does this</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/9-1
+00:00:19.093 --> 00:00:22.546
+<v Benjamin Howard>and then everyone has to come back on the
+camera. It's just, yeah,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/10-0
+00:00:22.405 --> 00:00:26.485
+<v Sara Snowden>And so many people don't come back on and
+then you know they're off multitasking.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/9-2
+00:00:22.546 --> 00:00:23.525
+<v Benjamin Howard>it is not worth it.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/12-0
+00:00:24.805 --> 00:00:29.050
+<v Benjamin Howard>Yeah.
+I've definitely done that before too. So,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/12-1
+00:00:29.050 --> 00:00:33.826
+<v Benjamin Howard>yeah. Okay,
+so I've had an opportunity to look at the</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/11-0
+00:00:31.525 --> 00:00:32.565
+<v Sara Snowden>Definitely guilty.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/12-2
+00:00:33.826 --> 00:00:38.514
+<v Benjamin Howard>deck you sent over.
+Thank you for sending over that.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/12-3
+00:00:38.514 --> 00:00:44.085
+<v Benjamin Howard>And then have started diving into the
+FedRep document as well.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/13-0
+00:00:45.045 --> 00:00:48.155
+<v Benjamin Howard>So kind of want to start from the
+beginning,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/13-1
+00:00:48.155 --> 00:00:53.545
+<v Benjamin Howard>kind of essentially what we talked about
+initially during that first meeting.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/13-2
+00:00:53.545 --> 00:00:59.004
+<v Benjamin Howard>If you could just give me a rundown of
+the requirements and everything of what</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/13-3
+00:00:59.004 --> 00:01:04.325
+<v Benjamin Howard>we're asking for for both projects.
+And then I'll ask a couple of questions.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/14-0
+00:01:05.205 --> 00:01:06.165
+<v Benjamin Howard>from there as well.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/16-0
+00:01:06.405 --> 00:01:10.320
+<v Sara Snowden>Narrow the scope down a little bit more
+because this can start from 100 different</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/16-1
+00:01:10.320 --> 00:01:12.898
+<v Sara Snowden>directions.
+Are we talking about the specific project</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/15-0
+00:01:11.365 --> 00:01:11.845
+<v Benjamin Howard>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/16-2
+00:01:12.898 --> 00:01:16.908
+<v Sara Snowden>or are we start like the specific we need
+to find out this data point and determine</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/16-3
+00:01:16.908 --> 00:01:20.583
+<v Sara Snowden>these limits like that part of the
+project or are we talking about MCSP more</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/16-4
+00:01:20.583 --> 00:01:20.965
+<v Sara Snowden>broadly?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/18-0
+00:01:21.605 --> 00:01:24.881
+<v Benjamin Howard>Yep,
+so just the project first on both levels,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/18-1
+00:01:24.881 --> 00:01:29.273
+<v Benjamin Howard>but the analytics and then finding the
+limits and information.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/18-2
+00:01:29.273 --> 00:01:35.198
+<v Benjamin Howard>So we'll start there. And then from there,
+then we could dive a little bit into more</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/17-0
+00:01:30.405 --> 00:01:30.965
+<v Sara Snowden>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/18-3
+00:01:35.198 --> 00:01:40.217
+<v Benjamin Howard>of the specifics of the project,
+but we'll start at the high levels for</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/18-4
+00:01:40.217 --> 00:01:40.565
+<v Benjamin Howard>both.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/19-0
+00:01:41.045 --> 00:01:44.679
+<v Sara Snowden>Okay, so for,
+and the two are kind of related and</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/19-1
+00:01:44.679 --> 00:01:49.185
+<v Sara Snowden>overlapping, right?
+The two different areas. So for software,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/19-2
+00:01:49.185 --> 00:01:52.382
+<v Sara Snowden>you have to determine what your limits
+are,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/19-3
+00:01:52.382 --> 00:01:57.978
+<v Sara Snowden>what you're telling customers you can do.
+A customer can't come in and put a</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/19-4
+00:01:57.978 --> 00:02:00.085
+<v Sara Snowden>million secrets in to vaults.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/21-0
+00:02:00.165 --> 00:02:03.304
+<v Sara Snowden>without us having to need to increase our
+machine size,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/21-1
+00:02:03.304 --> 00:02:07.395
+<v Sara Snowden>our underlying infrastructure.
+So we have to kind of set some parameters</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/21-2
+00:02:07.395 --> 00:02:10.702
+<v Sara Snowden>as far as, you know,
+these are the things that you can do.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/21-3
+00:02:10.702 --> 00:02:14.120
+<v Sara Snowden>And so if they need to go above that,
+absolutely no problem.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/21-4
+00:02:14.120 --> 00:02:18.716
+<v Sara Snowden>It just means that we're going to have to
+either have another cluster created for</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/21-5
+00:02:18.716 --> 00:02:20.565
+<v Sara Snowden>them and they would pay for that.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/22-0
+00:02:20.965 --> 00:02:24.922
+<v Sara Snowden>Or if it's a small amount, you know,
+we could just, you know,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/22-1
+00:02:24.922 --> 00:02:27.730
+<v Sara Snowden>perhaps allocate additional capacity to
+it.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/22-2
+00:02:27.730 --> 00:02:30.666
+<v Sara Snowden>And that's just kind of the secrets use
+case.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/22-3
+00:02:30.666 --> 00:02:35.580
+<v Sara Snowden>We need to do that for kind of everything
+as far as what we can support. So,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/22-4
+00:02:35.580 --> 00:02:38.962
+<v Sara Snowden>and I can send you an example of like HVD.
+Actually,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/22-5
+00:02:38.962 --> 00:02:43.365
+<v Sara Snowden>there's a slide in there where I copied
+some of the HVD limits down.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/23-0
+00:02:43.525 --> 00:02:48.344
+<v Sara Snowden>So HVD is HashiCorp Vault dedicated,
+that's Vault version.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/23-1
+00:02:48.344 --> 00:02:52.918
+<v Sara Snowden>It's a hosted cloud version just like
+what we're doing,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/23-2
+00:02:52.918 --> 00:02:57.001
+<v Sara Snowden>except it's on the HashiCorp Cloud
+Platform, HCP.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/23-3
+00:02:57.001 --> 00:03:03.045
+<v Sara Snowden>And what we're doing is we're rebuilding
+Vault to run on the multi-cloud.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/24-0
+00:03:03.765 --> 00:03:07.330
+<v Sara Snowden>software platform,
+IBM's overarching platform,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/24-1
+00:03:07.330 --> 00:03:13.549
+<v Sara Snowden>but it's not like our platform where HCP
+does a lot of the features and functions</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/24-2
+00:03:13.549 --> 00:03:16.886
+<v Sara Snowden>and the things that like all products
+need,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/24-3
+00:03:16.886 --> 00:03:22.725
+<v Sara Snowden>like license management and billing and
+like all of those things. MCSP does.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/25-0
+00:03:23.045 --> 00:03:28.161
+<v Sara Snowden>very small parts or gives you some tools
+so you can go do those things,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/25-1
+00:03:28.161 --> 00:03:32.494
+<v Sara Snowden>but we effectively have to rebuild
+everything. So with that,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/25-2
+00:03:32.494 --> 00:03:38.036
+<v Sara Snowden>we have to figure out how does our
+software run? What can customers do on it?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/25-3
+00:03:38.036 --> 00:03:42.085
+<v Sara Snowden>And does that all kind of match with
+their expectations?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/27-0
+00:03:42.245 --> 00:03:48.165
+<v Sara Snowden>you know, customers expect they can do X,
+Y, Z, and does it meet their needs.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/26-0
+00:03:46.845 --> 00:03:47.445
+<v Benjamin Howard>And we say...</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/28-0
+00:03:48.605 --> 00:03:54.604
+<v Benjamin Howard>And we say, how does our software run?
+Are you talking about how does HCP run or</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/29-0
+00:03:54.165 --> 00:03:58.348
+<v Sara Snowden>MCSP run.
+So HCP has already figured all of this</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/28-1
+00:03:54.604 --> 00:03:56.085
+<v Benjamin Howard>how MCSP runs? Okay.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/29-1
+00:03:58.348 --> 00:04:04.494
+<v Sara Snowden>out, so I can use them as kind of a,
+you know, just a validation point.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/29-2
+00:04:04.494 --> 00:04:11.151
+<v Sara Snowden>One of the complaints we get with HVD is
+it's not as enterprise ready as many</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/29-3
+00:04:11.151 --> 00:04:13.285
+<v Sara Snowden>customers want or expect.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/30-0
+00:04:13.605 --> 00:04:18.422
+<v Sara Snowden>Because some of our customers, not a ton,
+but some of them were our enterprise or</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/30-1
+00:04:18.422 --> 00:04:22.180
+<v Sara Snowden>self-managed customers,
+and they had Vault running in their own</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/30-2
+00:04:22.180 --> 00:04:25.117
+<v Sara Snowden>data center with their own infrastructure
+set up,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/30-3
+00:04:25.117 --> 00:04:27.760
+<v Sara Snowden>and so they could do as much as they
+wanted,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/30-4
+00:04:27.760 --> 00:04:32.165
+<v Sara Snowden>because they would just add machine,
+add capacity, and go about their day.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/31-0
+00:04:32.445 --> 00:04:37.068
+<v Sara Snowden>In A managed service environment,
+you only have so much capacity.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/31-1
+00:04:37.068 --> 00:04:42.671
+<v Sara Snowden>You can only have so many connections.
+You can only have so many things because</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/31-2
+00:04:42.671 --> 00:04:47.084
+<v Sara Snowden>there are physical limits that AWS has or
+maybe OpenShift has.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/31-3
+00:04:47.084 --> 00:04:50.165
+<v Sara Snowden>Because we are running vaults on
+OpenShift.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/32-0
+00:04:52.005 --> 00:04:59.959
+<v Sara Snowden>powered by Kubernetes and on top of the
+MCSP platform on top of AWS. So, you know,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/32-1
+00:04:59.959 --> 00:05:05.229
+<v Sara Snowden>we've got multiple layers of just
+dependencies, right?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/32-2
+00:05:05.229 --> 00:05:09.445
+<v Sara Snowden>So we have to make sure that Vault runs
+to.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/33-0
+00:05:10.885 --> 00:05:14.788
+<v Sara Snowden>efficiently enough to meet those
+customers' expectations and their</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/33-1
+00:05:14.788 --> 00:05:17.525
+<v Sara Snowden>requirements.
+And we need to make sure that...</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/34-0
+00:05:19.285 --> 00:05:23.950
+<v Sara Snowden>We need to basically make sure that we're
+at the right instance sizing,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/34-1
+00:05:23.950 --> 00:05:29.133
+<v Sara Snowden>so how much compute and how much RAM
+we're allocating to each customer cluster.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/34-2
+00:05:29.133 --> 00:05:34.251
+<v Sara Snowden>We need to make sure what we have now,
+which was our first kind of take at it,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/34-3
+00:05:34.251 --> 00:05:37.685
+<v Sara Snowden>meets their need, or if not,
+we need to increase it.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/35-0
+00:05:38.365 --> 00:05:43.442
+<v Sara Snowden>And then if we have to increase it,
+then there's some upstream things like,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/35-1
+00:05:43.442 --> 00:05:49.053
+<v Sara Snowden>okay, we can only fit this many, you know,
+customers on this size of VM. Otherwise,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/35-2
+00:05:49.053 --> 00:05:52.727
+<v Sara Snowden>we have to increase our sizes and what
+are our limits.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/35-3
+00:05:52.727 --> 00:05:55.934
+<v Sara Snowden>So there's a whole bunch of things around
+that.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/35-4
+00:05:55.934 --> 00:05:58.405
+<v Sara Snowden>So we're looking at things as far as.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/36-0
+00:05:59.045 --> 00:06:02.541
+<v Sara Snowden>the networking,
+looking at what our limits are for what</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/36-1
+00:06:02.541 --> 00:06:07.160
+<v Sara Snowden>AWS will allow in an environment.
+We have to look at how many connections</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/36-2
+00:06:07.160 --> 00:06:10.093
+<v Sara Snowden>we can support because AWS might have a
+limit,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/36-3
+00:06:10.093 --> 00:06:14.338
+<v Sara Snowden>but we could have a slightly different
+one because of our layers of</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/36-4
+00:06:14.338 --> 00:06:17.896
+<v Sara Snowden>infrastructure.
+So a number of things kind of like that.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/36-5
+00:06:17.896 --> 00:06:20.205
+<v Sara Snowden>So we're kind of trying to figure out</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/38-0
+00:06:21.165 --> 00:06:26.265
+<v Sara Snowden>What do we need in order to make sure
+that we're providing high SLAs and we're</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/38-1
+00:06:26.265 --> 00:06:29.621
+<v Sara Snowden>providing a wonderful experience for our
+customers?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/38-2
+00:06:29.621 --> 00:06:34.785
+<v Sara Snowden>And then we also need to make sure that
+we're not provisioning too much because</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/38-3
+00:06:34.785 --> 00:06:39.045
+<v Sara Snowden>that costs a lot of money and we want to
+be mindful of our spend.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/37-0
+00:06:37.405 --> 00:06:37.885
+<v Benjamin Howard>Mmh.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/40-0
+00:06:39.525 --> 00:06:45.173
+<v Sara Snowden>And then, yeah, if AWS doesn't allow it,
+then, or doesn't allow us to go further,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/40-1
+00:06:45.173 --> 00:06:49.651
+<v Sara Snowden>then what are we doing?
+So we have a number of things we have to</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/40-2
+00:06:49.651 --> 00:06:54.403
+<v Sara Snowden>figure out around that. So yeah,
+this is the list that I pulled from</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/39-0
+00:06:50.805 --> 00:06:51.285
+<v Benjamin Howard>Okay.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/40-3
+00:06:54.403 --> 00:06:54.885
+<v Sara Snowden>online.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/42-0
+00:06:57.205 --> 00:07:02.656
+<v Sara Snowden>that yeah, HPD has.
+And we want to at least meet or exceed</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/41-0
+00:07:00.325 --> 00:07:00.805
+<v Benjamin Howard>Mhm.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/42-1
+00:07:02.656 --> 00:07:04.965
+<v Sara Snowden>where they're showing up.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/43-0
+00:07:06.045 --> 00:07:10.907
+<v Benjamin Howard>Okay,
+and so these are kind of the metrics to</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/43-1
+00:07:10.907 --> 00:07:17.142
+<v Benjamin Howard>really start getting an idea about as we
+think about MCSP.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/43-2
+00:07:17.142 --> 00:07:24.645
+<v Benjamin Howard>And so if I'm understanding this right,
+HPP currently runs off of HCP.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/44-0
+00:07:25.005 --> 00:07:32.788
+<v Benjamin Howard>and we are looking to switch for MCSP,
+or excuse me, for HVP to run off of MCSP.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/44-1
+00:07:32.788 --> 00:07:34.325
+<v Benjamin Howard>Is that correct?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/48-0
+00:07:34.325 --> 00:07:38.636
+<v Sara Snowden>So HVD is HushCorp Vault dedicated.
+That's only on HCP. On MCSP,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/48-1
+00:07:38.636 --> 00:07:42.085
+<v Sara Snowden>we're actually not HVD because we're not
+dedicated.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/45-0
+00:07:38.805 --> 00:07:39.205
+<v Benjamin Howard>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/46-0
+00:07:40.405 --> 00:07:40.725
+<v Benjamin Howard>Yep.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/48-2
+00:07:42.085 --> 00:07:47.059
+<v Sara Snowden>Even though I use the acronym in
+everything I wrote for the first like six</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/47-0
+00:07:45.645 --> 00:07:46.085
+<v Benjamin Howard>OK.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/48-3
+00:07:47.059 --> 00:07:51.967
+<v Sara Snowden>months. So I was like, wait, no,
+I have to stop because we're actually on</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/48-4
+00:07:51.967 --> 00:07:54.885
+<v Sara Snowden>shared infrastructure.
+So we're just vault.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/50-0
+00:07:55.125 --> 00:07:59.399
+<v Sara Snowden>And then we're not broadcasting the MCSP
+part of it,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/50-1
+00:07:59.399 --> 00:08:05.608
+<v Sara Snowden>but internally we're just saying like
+MCSP vault or vault on MCSP. But yeah,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/49-0
+00:08:05.045 --> 00:08:05.525
+<v Benjamin Howard>Okoh.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/50-2
+00:08:05.608 --> 00:08:10.042
+<v Sara Snowden>we're trying to vault on each CP will
+continue to run.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/50-3
+00:08:10.042 --> 00:08:15.525
+<v Sara Snowden>That's our commercial offering. On MCSP,
+we're focusing on FedRAMP.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/51-0
+00:08:16.005 --> 00:08:20.005
+<v Sara Snowden>or federal.
+And then I'm looking at probably like</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/51-1
+00:08:20.005 --> 00:08:25.525
+<v Sara Snowden>maybe protected B in Canada next,
+but focus right now is on federal.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/51-2
+00:08:25.525 --> 00:08:32.165
+<v Sara Snowden>There's a lot of challenges of how do we
+do both and make it clear so sellers know</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/51-3
+00:08:32.165 --> 00:08:33.605
+<v Sara Snowden>what to sell when.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/53-0
+00:08:34.965 --> 00:08:42.270
+<v Sara Snowden>And the call was made to just bypass that
+for now and just focus on Fed in the MTSP</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/53-1
+00:08:42.270 --> 00:08:42.965
+<v Sara Snowden>setting.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/52-0
+00:08:43.965 --> 00:08:44.325
+<v Benjamin Howard>Kao.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/55-0
+00:08:45.125 --> 00:08:49.063
+<v Sara Snowden>Long term,
+we'll end up getting rid of HCP</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/54-0
+00:08:45.525 --> 00:08:46.005
+<v Benjamin Howard>Okay.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/55-1
+00:08:49.063 --> 00:08:55.564
+<v Sara Snowden>eventually and adopting MCSP.
+That is the long term executive guidance</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/55-2
+00:08:55.564 --> 00:09:01.057
+<v Sara Snowden>that's been given.
+I've put the feelers out or the call out</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/55-3
+00:09:01.057 --> 00:09:04.445
+<v Sara Snowden>there like, let's wait. We need some.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/56-0
+00:09:05.045 --> 00:09:08.285
+<v Sara Snowden>advances from the platform before we do
+that.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/57-0
+00:09:09.245 --> 00:09:13.044
+<v Benjamin Howard>Okay,
+and then some of the things that I think</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/57-1
+00:09:13.044 --> 00:09:18.459
+<v Benjamin Howard>you mentioned previously in terms of like
+understanding, you know,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/57-2
+00:09:18.459 --> 00:09:21.045
+<v Benjamin Howard>what are the customers doing and</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/58-0
+00:09:22.845 --> 00:09:29.040
+<v Benjamin Howard>Like, how many connections do they have?
+How many apps are hitting vault?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/58-1
+00:09:29.040 --> 00:09:34.817
+<v Benjamin Howard>And I think part of that that you
+mentioned is looking at the client</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/58-2
+00:09:34.817 --> 00:09:38.165
+<v Benjamin Howard>customer account and then understanding.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/60-0
+00:09:40.805 --> 00:09:45.944
+<v Benjamin Howard>the difference between like self-managed,
+like how many people are giving us access</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/59-0
+00:09:45.925 --> 00:09:46.325
+<v Sara Snowden>So...</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/60-1
+00:09:45.944 --> 00:09:48.085
+<v Benjamin Howard>versus people not giving us access.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/62-0
+00:09:48.645 --> 00:09:53.380
+<v Sara Snowden>That one's tricky because self-managed
+customers don't give us data by default.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/61-0
+00:09:53.205 --> 00:09:53.685
+<v Benjamin Howard>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/62-1
+00:09:53.380 --> 00:09:56.103
+<v Sara Snowden>In HPD,
+we get data by default because it's a</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/62-2
+00:09:56.103 --> 00:10:00.424
+<v Sara Snowden>managed service so we can see everything.
+In enterprise or self-managed,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/62-3
+00:10:00.424 --> 00:10:04.389
+<v Sara Snowden>that's in their data centers.
+So we have no visibility unless they</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/62-4
+00:10:04.389 --> 00:10:07.881
+<v Sara Snowden>share it with us.
+So we do have some tooling in there that</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/62-5
+00:10:07.881 --> 00:10:10.485
+<v Sara Snowden>allows them to just say like click yes
+and.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/63-0
+00:10:10.525 --> 00:10:14.086
+<v Sara Snowden>they'll share data,
+which is how I got this information.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/63-1
+00:10:14.086 --> 00:10:18.895
+<v Sara Snowden>So I am using enterprise information or
+self-managed information and not HPD</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/63-2
+00:10:18.895 --> 00:10:21.644
+<v Sara Snowden>because the federal customers that we
+have,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/63-3
+00:10:21.644 --> 00:10:26.890
+<v Sara Snowden>our public sector customers that we have,
+are only on self-managed because we don't</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/63-4
+00:10:26.890 --> 00:10:31.075
+<v Sara Snowden>have a FedRAMP offering.
+So we have a couple maybe here and there,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/63-5
+00:10:31.075 --> 00:10:31.325
+<v Sara Snowden>but.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/65-0
+00:10:31.525 --> 00:10:35.337
+<v Sara Snowden>not much on HPD.
+So I used public sector stuff because</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/65-1
+00:10:35.337 --> 00:10:40.880
+<v Sara Snowden>it's more important to me to understand
+what those customers are using and what</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/65-2
+00:10:40.880 --> 00:10:46.216
+<v Sara Snowden>it looks like because that would be
+reflective of what they would want to do</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/65-3
+00:10:46.216 --> 00:10:50.790
+<v Sara Snowden>likely in the cloud space.
+But I do suspect the information I was</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/65-4
+00:10:50.790 --> 00:10:52.245
+<v Sara Snowden>able to find in Sigma</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/66-0
+00:10:52.565 --> 00:10:56.805
+<v Sara Snowden>I don't think that's the full story.
+I think it's only a piece of the puzzle.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/67-0
+00:10:57.805 --> 00:11:03.180
+<v Benjamin Howard>Okay, and so self-managed,
+as you're referring to public sector,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/67-1
+00:11:03.180 --> 00:11:09.381
+<v Benjamin Howard>self-managed is related to public sector
+and HVD is related to enterprise.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/67-2
+00:11:09.381 --> 00:11:11.365
+<v Benjamin Howard>Or is that the opposite?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/68-0
+00:11:10.525 --> 00:11:14.433
+<v Sara Snowden>No,
+so Vault self-managed is also called</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/68-1
+00:11:14.433 --> 00:11:18.722
+<v Sara Snowden>Vault Enterprise.
+To make this really muddy,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/68-2
+00:11:18.722 --> 00:11:22.725
+<v Sara Snowden>HVD does run Vault Enterprise, but they...</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/69-0
+00:11:26.325 --> 00:11:31.625
+<v Sara Snowden>don't give customers all of the
+capabilities of Vault Enterprise because</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/69-1
+00:11:31.625 --> 00:11:35.837
+<v Sara Snowden>they retain a lot of it in order to do
+management, right?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/69-2
+00:11:35.837 --> 00:11:40.193
+<v Sara Snowden>So we can upgrade their software when
+they need to upgrade.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/69-3
+00:11:40.193 --> 00:11:43.605
+<v Sara Snowden>So we withhold a lot of that for
+customers. So</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/71-0
+00:11:45.125 --> 00:11:48.733
+<v Sara Snowden>It's all Vault Enterprise because it's
+the underlying binary,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/71-1
+00:11:48.733 --> 00:11:50.245
+<v Sara Snowden>but the go to market play.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/70-0
+00:11:48.965 --> 00:11:49.445
+<v Benjamin Howard>Mhm.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/72-0
+00:11:52.885 --> 00:11:57.398
+<v Sara Snowden>Vault Enterprise or Vault Self-Managed
+can be public sector customers,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/72-1
+00:11:57.398 --> 00:12:01.910
+<v Sara Snowden>it can be commercial customers.
+Public sector is a very small piece of</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/72-2
+00:12:01.910 --> 00:12:06.549
+<v Sara Snowden>the puzzle, to be transparent.
+But public sector customers can't be HVD,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/72-3
+00:12:06.549 --> 00:12:10.871
+<v Sara Snowden>but they can be Vault Enterprise,
+and they will be able to be MCSP.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/72-4
+00:12:10.871 --> 00:12:12.205
+<v Sara Snowden>Does that make sense?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/73-0
+00:12:13.765 --> 00:12:14.085
+<v Sara Snowden>Hi.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/74-0
+00:12:14.525 --> 00:12:15.285
+<v Benjamin Howard>It does, yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/75-0
+00:12:16.165 --> 00:12:17.925
+<v Benjamin Howard>Okay, so that makes a lot of sense.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/78-0
+00:12:16.645 --> 00:12:21.236
+<v Sara Snowden>It's clear as mud, by the way,
+and it took me probably two months before</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/76-0
+00:12:19.045 --> 00:12:19.365
+<v Benjamin Howard>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/78-1
+00:12:21.236 --> 00:12:26.329
+<v Sara Snowden>I started getting the difference because
+people refer to them Vault Cloud, well,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/78-2
+00:12:26.329 --> 00:12:29.284
+<v Sara Snowden>that's HVD,
+or now it's going to also be MCSP.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/78-3
+00:12:29.284 --> 00:12:31.925
+<v Sara Snowden>So there's just so many different nuances.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/77-0
+00:12:30.525 --> 00:12:30.605
+<v Benjamin Howard>The.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/79-0
+00:12:32.565 --> 00:12:35.125
+<v Benjamin Howard>Yeah, no, that makes sense now.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/81-0
+00:12:37.445 --> 00:12:40.929
+<v Benjamin Howard>The Sigma information,
+I didn't have access to that.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/81-1
+00:12:40.929 --> 00:12:44.150
+<v Benjamin Howard>Do I simply need to create the account
+for that?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/81-2
+00:12:44.150 --> 00:12:49.277
+<v Benjamin Howard>And that was just trying to access it
+through this link that you had provided</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/82-0
+00:12:48.565 --> 00:12:52.405
+<v Sara Snowden>You'll need to do it through passport.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/81-3
+00:12:49.277 --> 00:12:49.605
+<v Benjamin Howard>here.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/83-0
+00:12:55.365 --> 00:12:57.525
+<v Sara Snowden>with your HashiCorp email address.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/84-0
+00:12:59.805 --> 00:13:01.205
+<v Sara Snowden>Because you have one of those, right?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/86-0
+00:13:01.925 --> 00:13:05.789
+<v Benjamin Howard>I do. Now, how is that going to... Yeah,
+I was going to say,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/85-0
+00:13:03.205 --> 00:13:04.245
+<v Sara Snowden>Not for much longer.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/86-1
+00:13:05.789 --> 00:13:08.005
+<v Benjamin Howard>how does that impact going forward?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/88-0
+00:13:08.405 --> 00:13:15.529
+<v Sara Snowden>So emails will be forwarded to us for a
+while. I don't know what the full plan is,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/88-1
+00:13:15.529 --> 00:13:21.967
+<v Sara Snowden>because IBM uses Access Hub for
+everything, and we don't like that at all.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/88-2
+00:13:21.967 --> 00:13:24.885
+<v Sara Snowden>Let me see, I'm trying to grab it.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/87-0
+00:13:23.165 --> 00:13:23.445
+<v Benjamin Howard>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/89-0
+00:13:28.325 --> 00:13:30.325
+<v Sara Snowden>Good Lord, my legs are all messy.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/92-0
+00:13:41.685 --> 00:13:48.075
+<v Sara Snowden>Oh, that's why I'm on the wrong thing.
+Okay. So let's verify my identity.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/92-1
+00:13:48.075 --> 00:13:48.765
+<v Sara Snowden>One sec.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/91-0
+00:13:49.765 --> 00:13:50.005
+<v Benjamin Howard>Hmm?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/94-0
+00:14:01.285 --> 00:14:05.285
+<v Sara Snowden>So I will send you the link for doormat.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/95-0
+00:14:09.925 --> 00:14:13.405
+<v Sara Snowden>And you can look up sigma in the...</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/96-0
+00:14:15.685 --> 00:14:18.965
+<v Sara Snowden>Corporate apps, yeah,
+in the corporate app section.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/98-0
+00:14:25.445 --> 00:14:27.685
+<v Benjamin Howard>And are you sending that on Slack?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/99-0
+00:14:27.845 --> 00:14:28.165
+<v Sara Snowden>Yep.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/100-0
+00:14:28.805 --> 00:14:29.765
+<v Benjamin Howard>Okay, perfect.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/101-0
+00:14:32.885 --> 00:14:34.245
+<v Sara Snowden>Let me take a quick look.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/102-0
+00:14:38.805 --> 00:14:41.285
+<v Sara Snowden>Sigma Raul.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/104-0
+00:14:57.525 --> 00:14:58.165
+<v Sara Snowden>Think it's Raul.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/108-0
+00:15:19.965 --> 00:15:21.805
+<v Sara Snowden>Okay, so I gave you the.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/109-0
+00:15:25.805 --> 00:15:27.605
+<v Sara Snowden>what to look up and look for.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/110-0
+00:15:28.805 --> 00:15:28.925
+<v Benjamin Howard>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/111-0
+00:15:29.805 --> 00:15:30.885
+<v Benjamin Howard>Perfect, thank you.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/112-0
+00:15:31.205 --> 00:15:34.981
+<v Sara Snowden>Yeah, so that should help you.
+Sometimes takes a day or two for them to</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/112-1
+00:15:34.981 --> 00:15:37.498
+<v Sara Snowden>approve it.
+And that will give you view access.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/112-2
+00:15:37.498 --> 00:15:41.745
+<v Sara Snowden>You won't be able to export any of the
+data. There's Ginger with those licenses.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/112-3
+00:15:41.745 --> 00:15:43.685
+<v Sara Snowden>I'm trying to actually get mine back.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/114-0
+00:15:46.045 --> 00:15:49.909
+<v Sara Snowden>just because they're expensive. But yeah,
+they're usually pretty good about</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/114-1
+00:15:49.909 --> 00:15:52.604
+<v Sara Snowden>improving it.
+And you can also see who the improvers</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/113-0
+00:15:52.245 --> 00:15:52.725
+<v Benjamin Howard>Thanks.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/114-2
+00:15:52.604 --> 00:15:54.485
+<v Sara Snowden>are and you can also hit them up too.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/115-0
+00:15:55.045 --> 00:16:00.949
+<v Benjamin Howard>Okay, perfect. And now in terms of,
+we kind of discussed timeline a little</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/115-1
+00:16:00.949 --> 00:16:04.885
+<v Benjamin Howard>bit, just kind of an intermediacy,
+about a month.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/116-0
+00:16:07.365 --> 00:16:13.285
+<v Benjamin Howard>In terms of like deliverables or like
+final like outcomes and what are we</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/116-1
+00:16:13.285 --> 00:16:18.005
+<v Benjamin Howard>looking for in that?
+Are the specific things that are like</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/116-2
+00:16:18.005 --> 00:16:21.205
+<v Benjamin Howard>need to have, nice to haves, must haves?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/117-0
+00:16:22.005 --> 00:16:26.215
+<v Sara Snowden>The big need to have is understanding how
+many connections.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/117-1
+00:16:26.215 --> 00:16:31.899
+<v Sara Snowden>And I gave in that deck just an idea of
+maybe we could use client counts in this</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/117-2
+00:16:31.899 --> 00:16:36.741
+<v Sara Snowden>kind of wild *** guess way,
+which honestly would be very inaccurate,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/117-3
+00:16:36.741 --> 00:16:38.565
+<v Sara Snowden>but it would be something.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/118-0
+00:16:41.045 --> 00:16:45.042
+<v Sara Snowden>I think the best would be to get a couple
+RFPs or RFSs.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/118-1
+00:16:45.042 --> 00:16:49.325
+<v Sara Snowden>I don't know what they do here or what
+our team would have,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/118-2
+00:16:49.325 --> 00:16:55.107
+<v Sara Snowden>but a couple from public sector customers
+looking for vault and just seeing what</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/118-3
+00:16:55.107 --> 00:16:59.389
+<v Sara Snowden>their accounts are.
+Because anytime I've ever been involved</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/118-4
+00:16:59.389 --> 00:17:01.245
+<v Sara Snowden>in RFPs, they always have.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/122-0
+00:17:01.685 --> 00:17:05.562
+<v Sara Snowden>information about the customer's
+environment.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/122-1
+00:17:05.562 --> 00:17:12.724
+<v Sara Snowden>I've tried asking people and you just get
+very flippant, oh, a couple 100, you know,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/119-0
+00:17:06.325 --> 00:17:06.565
+<v Benjamin Howard>If.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/122-2
+00:17:12.724 --> 00:17:16.432
+<v Sara Snowden>or these guys have a couple thousand.
+Well,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/122-3
+00:17:16.432 --> 00:17:20.645
+<v Sara Snowden>like I need a little bit more granular
+than that.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/120-0
+00:17:18.645 --> 00:17:19.125
+<v Benjamin Howard>Yes.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/121-0
+00:17:21.525 --> 00:17:21.885
+<v Benjamin Howard>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/123-0
+00:17:22.245 --> 00:17:27.625
+<v Sara Snowden>Understanding the connections is going to
+have an impact on what our capacity is</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/123-1
+00:17:27.625 --> 00:17:32.074
+<v Sara Snowden>going to need to look like,
+what our throughput would need to look</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/123-2
+00:17:32.074 --> 00:17:35.063
+<v Sara Snowden>like,
+and what our networking configurations</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/123-3
+00:17:35.063 --> 00:17:39.313
+<v Sara Snowden>are going to look like.
+We can put some guesses together around</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/123-4
+00:17:39.313 --> 00:17:39.645
+<v Sara Snowden>that.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/124-0
+00:17:39.765 --> 00:17:43.929
+<v Sara Snowden>but they're really going to be very,
+very high level unless we understand a</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/124-1
+00:17:43.929 --> 00:17:44.805
+<v Sara Snowden>little bit more.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/127-0
+00:17:47.125 --> 00:17:49.446
+<v Sara Snowden>about the customer behavior.
+And by the way,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/127-1
+00:17:49.446 --> 00:17:53.416
+<v Sara Snowden>these are kind of like my notes because
+I'm just kind of working through it.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/125-0
+00:17:53.045 --> 00:17:53.525
+<v Benjamin Howard>Mhm.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/127-2
+00:17:53.416 --> 00:17:55.685
+<v Sara Snowden>So if you look at the slide above,
+slide 8.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/126-0
+00:17:56.965 --> 00:17:57.445
+<v Benjamin Howard>Mhm.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/128-0
+00:17:59.605 --> 00:18:00.965
+<v Sara Snowden>Oops, sorry, go down one.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/129-0
+00:18:03.365 --> 00:18:06.745
+<v Sara Snowden>Yeah,
+so I was trying to understand what's</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/129-1
+00:18:06.745 --> 00:18:12.325
+<v Sara Snowden>impacting what. So the high RAM or memory,
+we're famous for, you know,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/129-2
+00:18:12.325 --> 00:18:18.533
+<v Sara Snowden>having issues with that because so many
+of our most popular secret engines are</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/129-3
+00:18:18.533 --> 00:18:21.205
+<v Sara Snowden>very big memory hogs on instances.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/130-0
+00:18:22.485 --> 00:18:25.999
+<v Sara Snowden>Compute,
+I've seen less of that since I've been</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/130-1
+00:18:25.999 --> 00:18:30.683
+<v Sara Snowden>here last year and change,
+but there is still definitely demand</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/130-2
+00:18:30.683 --> 00:18:34.196
+<v Sara Snowden>there.
+So those are just kind of like my notes.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/130-3
+00:18:34.196 --> 00:18:38.295
+<v Sara Snowden>And then HVD,
+this is how their machines are sized out.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/130-4
+00:18:38.295 --> 00:18:43.565
+<v Sara Snowden>The reference architecture represents
+what Vault Enterprise recommends.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/131-0
+00:18:43.645 --> 00:18:44.565
+<v Sara Snowden>that customers do.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/133-0
+00:18:46.565 --> 00:18:48.325
+<v Sara Snowden>So that was just for some context.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/132-0
+00:18:46.645 --> 00:18:47.445
+<v Benjamin Howard>And so...</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/134-0
+00:18:49.125 --> 00:18:52.829
+<v Benjamin Howard>And when you say connections,
+are you talking about the connections</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/134-1
+00:18:52.829 --> 00:18:54.245
+<v Benjamin Howard>between each one of these?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/137-0
+00:18:54.685 --> 00:18:58.635
+<v Sara Snowden>No, no, no, no, definitely not.
+Way too complicated.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/135-0
+00:18:55.765 --> 00:18:56.245
+<v Benjamin Howard>Or.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/136-0
+00:18:58.005 --> 00:18:58.565
+<v Benjamin Howard>Okay.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/137-1
+00:18:58.635 --> 00:19:02.586
+<v Sara Snowden>How many machines are hitting fault from
+a customer?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/137-2
+00:19:02.586 --> 00:19:08.325
+<v Sara Snowden>How many users are logging in to set
+stuff up or do stuff or whatever it is?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/137-3
+00:19:08.325 --> 00:19:12.200
+<v Sara Snowden>So in the beginning,
+you have higher user accounts,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/137-4
+00:19:12.200 --> 00:19:13.765
+<v Sara Snowden>lower machine counts.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/138-0
+00:19:13.965 --> 00:19:17.253
+<v Sara Snowden>And then over time,
+it gets more embedded into their</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/138-1
+00:19:17.253 --> 00:19:20.230
+<v Sara Snowden>workflows.
+And you'll see very little login and</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/138-2
+00:19:20.230 --> 00:19:24.635
+<v Sara Snowden>you'll see a lot of machines.
+But I don't know how many machines would</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/138-3
+00:19:24.635 --> 00:19:28.977
+<v Sara Snowden>be hitting Vault or how many apps.
+So it's really how many things are</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/138-4
+00:19:28.977 --> 00:19:29.845
+<v Sara Snowden>hitting Vault.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/140-0
+00:19:32.165 --> 00:19:36.707
+<v Sara Snowden>Ideally on what cadence,
+but I doubt we could get that level of</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/140-1
+00:19:36.707 --> 00:19:41.887
+<v Sara Snowden>granularity. That would be golden,
+but I'm not that optimistic that that</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/140-2
+00:19:41.887 --> 00:19:44.725
+<v Sara Snowden>would be in an RFP or in someone's head.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/139-0
+00:19:45.685 --> 00:19:46.165
+<v Benjamin Howard>Is that?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/142-0
+00:19:47.205 --> 00:19:51.535
+<v Sara Snowden>So I would think,
+I think the most effective manner would</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/142-1
+00:19:51.535 --> 00:19:57.208
+<v Sara Snowden>be if we could get a couple of those.
+And it doesn't have to be exhaustive.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/142-2
+00:19:57.208 --> 00:20:03.180
+<v Sara Snowden>It doesn't have to be, you know, 10,000.
+Like if we could get 5 or 10 to scroll</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/142-3
+00:20:03.180 --> 00:20:07.285
+<v Sara Snowden>through and capture numbers.
+That would be phenomenal.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/141-0
+00:20:08.365 --> 00:20:08.645
+<v Benjamin Howard>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/143-0
+00:20:21.525 --> 00:20:22.085
+<v Benjamin Howard>Mhm.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/144-0
+00:20:22.885 --> 00:20:25.205
+<v Sara Snowden>Not this one, it was the one on slide 4.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/147-0
+00:20:28.085 --> 00:20:32.664
+<v Sara Snowden>Yeah, that one.
+So we have a pretty good view of what</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/147-1
+00:20:32.664 --> 00:20:36.648
+<v Sara Snowden>they're using and what that volume looks
+like.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/147-2
+00:20:36.648 --> 00:20:42.583
+<v Sara Snowden>We just don't know the frequency and
+what's behind the volume, right?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/147-3
+00:20:42.583 --> 00:20:43.685
+<v Sara Snowden>So keys like.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/146-0
+00:20:43.005 --> 00:20:43.685
+<v Benjamin Howard>And we can.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/149-0
+00:20:44.605 --> 00:20:49.438
+<v Benjamin Howard>And something that just came to mind,
+we can look at this information and think</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/149-1
+00:20:49.438 --> 00:20:53.244
+<v Benjamin Howard>about the organization,
+think about like organization size and</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/149-2
+00:20:53.244 --> 00:20:57.291
+<v Benjamin Howard>like what they're doing.
+And I think that's like some of the areas</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/149-3
+00:20:57.291 --> 00:21:01.640
+<v Benjamin Howard>in which I'll drill down to understand,
+because it'll allow you to make</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/149-4
+00:21:01.640 --> 00:21:05.325
+<v Benjamin Howard>potentially future projections. So like,
+let's say it's a...</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/150-0
+00:21:06.645 --> 00:21:11.947
+<v Benjamin Howard>say it's an AI company, right?
+And then how many are they running versus</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/150-1
+00:21:11.947 --> 00:21:16.377
+<v Benjamin Howard>like another company?
+You can kind of start breaking it down</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/150-2
+00:21:16.377 --> 00:21:16.885
+<v Benjamin Howard>into...</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/151-0
+00:21:18.565 --> 00:21:19.765
+<v Benjamin Howard>What their?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/153-0
+00:21:20.725 --> 00:21:25.090
+<v Benjamin Howard>I guess, like, what their work, yeah,
+what they're doing and that work looks</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/152-0
+00:21:21.725 --> 00:21:22.805
+<v Sara Snowden>what they're doing.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/153-1
+00:21:25.090 --> 00:21:27.868
+<v Benjamin Howard>like,
+and see if that has a correlation between,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/155-0
+00:21:27.765 --> 00:21:32.677
+<v Sara Snowden>But we're not looking at AI companies,
+we're looking at like the VA and we're</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/153-2
+00:21:27.868 --> 00:21:29.285
+<v Benjamin Howard>like, how much they're...</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/154-0
+00:21:32.605 --> 00:21:33.125
+<v Benjamin Howard>Yeah.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/155-1
+00:21:32.677 --> 00:21:37.525
+<v Sara Snowden>looking at the Department of Defense or
+we're looking at so on and so forth.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/156-0
+00:21:38.005 --> 00:21:40.645
+<v Benjamin Howard>Yeah, yeah, exactly. Okay.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/157-0
+00:21:40.085 --> 00:21:44.370
+<v Sara Snowden>So,
+and there is a lot of push from Fitara.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/157-1
+00:21:44.370 --> 00:21:52.161
+<v Sara Snowden>It's a federal initiative that they are
+agencies need to basically adopt cloud,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/157-2
+00:21:52.161 --> 00:21:58.101
+<v Sara Snowden>work on modernization.
+They need to increase their security.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/157-3
+00:21:58.101 --> 00:22:00.925
+<v Sara Snowden>There's an executive mandate.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/158-0
+00:22:01.125 --> 00:22:04.389
+<v Sara Snowden>that I have the numbers written down
+somewhere.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/158-1
+00:22:04.389 --> 00:22:09.555
+<v Sara Snowden>There's an executive mandate that they
+basically up their game with digital</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/158-2
+00:22:09.555 --> 00:22:14.450
+<v Sara Snowden>transformations and stuff like that.
+So there is a lot of push from the</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/158-3
+00:22:14.450 --> 00:22:18.666
+<v Sara Snowden>overarching, you know,
+just government entities need to start</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/158-4
+00:22:18.666 --> 00:22:19.685
+<v Sara Snowden>embracing this.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/159-0
+00:22:20.485 --> 00:22:23.124
+<v Sara Snowden>you know,
+reducing their costs and being more</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/159-1
+00:22:23.124 --> 00:22:27.253
+<v Sara Snowden>efficient in adopting cloud.
+So there's definitely drivers behind that.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/159-2
+00:22:27.253 --> 00:22:30.809
+<v Sara Snowden>And I actually have,
+I can send you my initial business case,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/159-3
+00:22:30.809 --> 00:22:34.881
+<v Sara Snowden>which will give you a little bit of
+context around kind of some of the</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/159-4
+00:22:34.881 --> 00:22:39.125
+<v Sara Snowden>drivers and kind of some of the revenue
+and things that we're looking at.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/161-0
+00:22:39.365 --> 00:22:43.312
+<v Sara Snowden>I think Tyler strategy doc that I also
+sent you that I think you started,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/161-1
+00:22:43.312 --> 00:22:47.312
+<v Sara Snowden>you said you start poking through.
+I think that one covers a little bit of</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/160-0
+00:22:44.965 --> 00:22:45.445
+<v Benjamin Howard>Mhm.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/161-2
+00:22:47.312 --> 00:22:47.685
+<v Sara Snowden>it too.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/162-0
+00:22:48.885 --> 00:22:52.485
+<v Benjamin Howard>And so do we have kind of an exhaustive
+client list?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/163-0
+00:22:55.685 --> 00:22:56.645
+<v Sara Snowden>In what regard?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/165-0
+00:22:57.525 --> 00:23:02.092
+<v Benjamin Howard>that we could start, you know,
+when we think about people to potentially</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/165-1
+00:23:02.092 --> 00:23:05.845
+<v Benjamin Howard>talk to that are utilizing the services.
+Do we have a list?</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/164-0
+00:23:05.125 --> 00:23:05.445
+<v Sara Snowden>O.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/166-0
+00:23:06.405 --> 00:23:11.743
+<v Sara Snowden>We could obtain one for sure.
+The customers that like I talked or I</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/166-1
+00:23:11.743 --> 00:23:17.473
+<v Sara Snowden>looked up their information for,
+those are listed on that tracker sheet.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/166-2
+00:23:17.473 --> 00:23:23.203
+<v Sara Snowden>Those are people I found in Sigma.
+Normally we start with talking to the</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/166-3
+00:23:23.203 --> 00:23:27.285
+<v Sara Snowden>folks in the field.
+The essays help in a pre-sales.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/167-0
+00:23:27.405 --> 00:23:31.617
+<v Sara Snowden>capacity, the solution architects,
+the SEs help post sales.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/167-1
+00:23:31.617 --> 00:23:37.373
+<v Sara Snowden>So we have resident technology services.
+Those customers are directly embedded at</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/167-2
+00:23:37.373 --> 00:23:42.357
+<v Sara Snowden>a customer or for a customer.
+So they're working all the time, day in,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/167-3
+00:23:42.357 --> 00:23:45.586
+<v Sara Snowden>day out with them.
+The SEs are not dedicated,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/167-4
+00:23:45.586 --> 00:23:49.939
+<v Sara Snowden>but they work very,
+very closely with their customers because</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/167-5
+00:23:49.939 --> 00:23:52.325
+<v Sara Snowden>Vault is like the most complicated</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/168-0
+00:23:52.365 --> 00:23:56.870
+<v Sara Snowden>project or product ever,
+and you can use it in so many hundreds of</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/168-1
+00:23:56.870 --> 00:24:02.181
+<v Sara Snowden>ways. Oh shoot, I'm missing a meeting.
+So the SEs tend to know what's going on</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/168-2
+00:24:02.181 --> 00:24:05.274
+<v Sara Snowden>in the customer's environment extremely
+well,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/168-3
+00:24:05.274 --> 00:24:10.719
+<v Sara Snowden>which is why rather than going directly
+to customers at this stage, it was more,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/168-4
+00:24:10.719 --> 00:24:13.005
+<v Sara Snowden>let's use what we have internally.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/169-0
+00:24:13.525 --> 00:24:18.187
+<v Sara Snowden>to start capturing information before we
+have to worry about kind of that customer</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/169-1
+00:24:18.187 --> 00:24:19.085
+<v Sara Snowden>validation part.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/171-0
+00:24:20.325 --> 00:24:24.368
+<v Sara Snowden>Because really we just need to know we've
+got a lot of pieces to the puzzle.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/170-0
+00:24:20.645 --> 00:24:21.525
+<v Benjamin Howard>No, that makes sense.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/171-1
+00:24:24.368 --> 00:24:27.045
+<v Sara Snowden>We just have to like pull the rest of it
+together.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/173-0
+00:24:27.845 --> 00:24:31.243
+<v Benjamin Howard>Okay, that makes sense. All right, well,
+let me take a look at this.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/173-1
+00:24:31.243 --> 00:24:34.198
+<v Benjamin Howard>I know you have to jump to the meeting,
+so I'll let you go.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/172-0
+00:24:33.285 --> 00:24:35.765
+<v Sara Snowden>Yeah, I'm 10 minutes late.
+I didn't even notice.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/173-2
+00:24:34.198 --> 00:24:37.349
+<v Benjamin Howard>I'll take a look at this,
+absorb everything, absorb everything,</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/173-3
+00:24:37.349 --> 00:24:40.205
+<v Benjamin Howard>and then I will get back to you.
+Thank you so much, Sara.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/175-0
+00:24:39.365 --> 00:24:42.245
+<v Sara Snowden>Cool. Yeah,
+and let's set up time next week and</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/174-0
+00:24:41.365 --> 00:24:41.525
+<v Benjamin Howard>Okay.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/175-1
+00:24:42.245 --> 00:24:46.865
+<v Sara Snowden>continue chatting and I'll send some
+stuff your way that might be helpful to</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/175-2
+00:24:46.865 --> 00:24:51.245
+<v Sara Snowden>start establishing a little bit of
+context of the environment that we're</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/175-3
+00:24:51.245 --> 00:24:54.005
+<v Sara Snowden>working on and trying to drive some wins
+for.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/176-0
+00:24:54.765 --> 00:24:57.365
+<v Benjamin Howard>That was great. Thank you so much.
+You have a great rest of your day.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/177-0
+00:24:56.005 --> 00:24:57.925
+<v Sara Snowden>Cool. Thank you. Have a wonderful day.</v>
+
+515f3120-5e31-4772-9ae8-6edc3a303801/179-0
+00:24:58.725 --> 00:24:59.445
+<v Benjamin Howard>Big face.</v>

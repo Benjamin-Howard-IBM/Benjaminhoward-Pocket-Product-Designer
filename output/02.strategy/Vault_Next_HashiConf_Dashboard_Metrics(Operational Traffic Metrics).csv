@@ -1,7 +1,0 @@
-Metric Name,Effort,Complexity/Notes,Reference
-Overall requests by type (Read/write),,,
-Overall response time of Requests / latency,,,
-Most used/least used stores / scopes,,,
-# API calls,,,
-,,,
-ALL OPERATIONAL METRICS OUT OF HASHI SCOPE,,,
