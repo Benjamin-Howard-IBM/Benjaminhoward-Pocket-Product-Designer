@@ -116,8 +116,12 @@ Use `designer` first when the right design route is unclear.
 | Component states, timing, validation, retry, recovery, focus, accessibility behavior | `microinteractions-expert` |
 | Polished visual/UI/frontend craft | external `impeccable` |
 | Existing artifact critique or dual critique | external `critique`, or product-designer heuristic fallback |
+| IBM Carbon components, 2x Grid, Carbon tokens, `@carbon/react` UI | `carbon-design-system` |
+| HashiCorp Helios components, tokens, Ember UI | `helios-design-system` |
 
 `hashi-designer` is a compatibility alias. New work should use `product-designer` or `designer`.
+
+Design system references (`carbon-design-system`, `helios-design-system`) are reference skills, not routers. Load one when a task must align to that specific design system; otherwise stay design-system-agnostic.
 
 Do not merge every design skill into one large response. Route to the smallest useful specialist and keep fidelity matched to the next decision.
 
