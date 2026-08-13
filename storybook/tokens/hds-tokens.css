@@ -1,0 +1,147 @@
+/* ============================================================
+   HDS Design Tokens - Helios Design System (HashiCorp)
+   Maps HDS visual values to the shared --z-* variable names.
+   Import this file in HVD stories instead of index.css.
+   MCSP stories continue to use index.css (Carbon values).
+
+   Source: https://helios.hashicorp.design/foundations/tokens
+   ============================================================ */
+
+@layer base, utilities;
+
+@layer base {
+  :root {
+    /* -- Surfaces -- */
+    --z-bg:             #ffffff;          /* token-color-surface-primary */
+    --z-bg-hover:       #e5e7eb;          /* token-color-surface-interactive-hover */
+    --z-layer-01:       #f7f8f8;          /* token-color-surface-faint */
+    --z-layer-02:       #eef0f3;          /* token-color-surface-strong */
+    --z-surface:        #f7f8f8;
+    --z-overlay:        rgba(0, 0, 0, 0.35);
+
+    /* -- Borders -- */
+    --z-border-subtle:  #d4d8e1;          /* token-color-border-primary */
+    --z-border-strong:  #97a0b3;          /* token-color-border-strong */
+
+    /* -- Text -- */
+    --z-text-primary:   #1c1c1c;          /* token-color-foreground-primary */
+    --z-text-secondary: #656a76;          /* token-color-foreground-faint */
+    --z-text-helper:    #656a76;
+    --z-text-placeholder: #9ea6b3;        /* token-color-foreground-disabled */
+
+    /* -- Interactive -- */
+    --z-focus:          #1563ff;          /* token-color-focus-action-internal */
+    --z-interactive:    #1563ff;          /* token-color-foreground-action */
+
+    /* -- Status -- */
+    --z-success:        #00a550;          /* token-color-foreground-success */
+    --z-error:          #c8102e;          /* token-color-foreground-critical */
+    --z-warning:        #f7c948;          /* token-color-foreground-warning */
+    --z-info:           #1563ff;          /* token-color-foreground-highlight */
+
+    /* -- HDS-specific surface colors -- */
+    --z-surface-success:  #e5f7ee;        /* token-color-surface-success */
+    --z-surface-error:    #fce8eb;        /* token-color-surface-critical */
+    --z-surface-warning:  #fdf6d8;        /* token-color-surface-warning */
+    --z-surface-info:     #e5edff;        /* token-color-surface-highlight */
+
+    /* -- Shell / Nav -- */
+    --z-nav-bg:         #1c1c1c;          /* AppHeader background */
+    --z-nav-text:       #ffffff;
+    --z-nav-border:     #2e2e2e;
+    --z-sidenav-bg:     #ffffff;
+    --z-sidenav-active-bg: #e5edff;
+    --z-sidenav-active-text: #1563ff;
+
+    /* -- Typography -- */
+    --z-font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --z-font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+    /* HDS type scale (rem, base 16px) */
+    --z-text-2xs:  0.6875rem;  /* 11px */
+    --z-text-xs:   0.75rem;    /* 12px */
+    --z-text-sm:   0.8125rem;  /* 13px */
+    --z-text-base: 0.875rem;   /* 14px */
+    --z-text-lg:   1rem;       /* 16px */
+    --z-text-xl:   1.125rem;   /* 18px */
+    --z-text-2xl:  1.25rem;    /* 20px */
+    --z-text-3xl:  1.5rem;     /* 24px */
+
+    --z-weight-normal:   400;
+    --z-weight-medium:   500;
+    --z-weight-semibold: 600;
+    --z-weight-bold:     700;
+
+    --z-leading-tight:   1.2;
+    --z-leading-normal:  1.375;
+    --z-leading-relaxed: 1.5;
+
+    --z-tracking-tight:  0;
+    --z-tracking-normal: 0;      /* HDS uses 0 letter-spacing by default */
+    --z-tracking-wide:   0.01em;
+
+    /* -- Spacing (4px base grid) -- */
+    --z-space-01: 0.25rem;   /* 4px  */
+    --z-space-02: 0.5rem;    /* 8px  */
+    --z-space-03: 0.75rem;   /* 12px */
+    --z-space-04: 1rem;      /* 16px */
+    --z-space-05: 1.25rem;   /* 20px */
+    --z-space-06: 1.5rem;    /* 24px */
+    --z-space-07: 2rem;      /* 32px */
+    --z-space-08: 2.5rem;    /* 40px */
+    --z-space-09: 3rem;      /* 48px */
+    --z-space-10: 4rem;      /* 64px */
+
+    /* -- Border Radius (HDS uses rounded corners) -- */
+    --z-radius-none: 0;
+    --z-radius-sm:   5px;    /* inputs, badges, small elements */
+    --z-radius-md:   6px;    /* buttons, cards */
+    --z-radius-lg:   8px;    /* modals, popovers */
+    --z-radius-xl:   12px;
+    --z-radius-full: 9999px; /* pills */
+
+    /* -- Shadows (HDS elevation) -- */
+    --z-shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.06);
+    --z-shadow-md:  0 2px 8px rgba(0, 0, 0, 0.10);
+    --z-shadow-lg:  0 8px 24px rgba(0, 0, 0, 0.14);
+
+    /* -- Transitions -- */
+    --z-transition-fast: 0.1s ease;
+    --z-transition-base: 0.15s ease-out;
+    --z-transition-slow: 0.25s ease;
+
+    /* -- Z-Index -- */
+    --z-index-sticky:   100;
+    --z-index-tooltip:  200;
+    --z-index-modal:    1000;
+  }
+
+  body {
+    font-family: var(--z-font-sans);
+    font-size: var(--z-text-base);
+    line-height: var(--z-leading-relaxed);
+    letter-spacing: var(--z-tracking-normal);
+    background: var(--z-bg);
+    color: var(--z-text-primary);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--z-font-mono);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--z-layer-01); }
+  ::-webkit-scrollbar-thumb { background: var(--z-border-subtle); border-radius: var(--z-radius-full); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--z-border-strong); }
+
+  /* Focus ring - HDS uses blue outline */
+  *:focus-visible {
+    outline: 2px solid var(--z-focus);
+    outline-offset: 2px;
+    border-radius: var(--z-radius-sm);
+  }
+}
