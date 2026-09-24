@@ -1,0 +1,33 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000', 'secondaryColor': '#ffffff', 'tertiaryColor': '#ffffff', 'background': '#ffffff', 'mainBkg': '#ffffff', 'nodeBorder': '#000000', 'clusterBkg': '#ffffff', 'titleColor': '#000000', 'edgeLabelBackground': '#ffffff', 'fontFamily': 'Arial'}}}%%
+flowchart TD
+    S0["S0 - Networking Overview"] -->|"Gateway card - Disabled"| S1
+    S0 -->|"Gateway card - Enabled"| S8
+
+    S1["S1 - Gateways Landing"] -->|"Enable Gateways"| S2
+
+    S2["S2 - Enable Gateways Form"] -->|"Deploy gateways"| S3
+    S2 -->|"Cancel"| S1
+
+    S3["S3 - Enabled, No Sites"] -->|"Add site"| S4
+
+    S4["S4 - Prerequisites"] -->|"Next - all checked"| S5
+    S4 -->|"Next - unchecked items"| S5warn["S5 with soft warning"]
+    S4 -->|"Cancel"| S3
+
+    S5["S5 - Configure"] -->|"Next"| S6
+    S5 -->|"Back"| S4
+    S5warn -->|"Next"| S6
+
+    S6["S6 - Install"] -->|"Start verification"| S7
+    S6 -->|"Back"| S5
+
+    S7["S7 - Verify"] -->|"Done - connected"| S8
+    S7 -->|"View site - connected"| S9
+    S7 -->|"Exit without saving - failed"| S8
+    S7 -->|"Retry - failed"| S7
+
+    S8["S8 - Gateways Overview\nsiteAdded = false only: Add site"] -->|"Add site"| S4
+    S8 -->|"Site row click"| S9
+
+    S9["S9 - Site Detail"] -->|"Back to Gateways"| S8
+    S9 -->|"Remove site confirmed"| S1

@@ -44,9 +44,8 @@ The **Scenario** toggle in the header switches instantly between presets. Switch
 S0 (Networking overview)
  └─ Gateway card "Edit →"
      ├─ [Day 0] → S1 (Gateways landing, disabled)
-     │    └─ "Enable Gateways" button → Enable Gateways modal
-     │         └─ "Enable" → S2 (Enable gateways form — routing table)
-     │              └─ "Enable Gateways" → S3 (Gateways enabled, no sites)
+     │    └─ "Enable Gateways" button → S2 (Enable gateways form — routing table)
+     │              └─ "Deploy gateways" → S3 (Gateways enabled, no sites)
      │                   └─ "Add site" → S4
      └─ [Day N] → S8 (Gateways overview — sites table)
                    └─ "Add site" → S4  [V2 only]
@@ -124,7 +123,7 @@ Fixed left rail (`width: 224 px`, white, `border-right: #E5E5E5`), below header.
 | Cluster accessibility | `success` Public | Cluster is accessible over the public internet. | Edit → (no-op) |
 | IP Allow list | `success` 13 IP addresses allowed | Allow only specific source IP(s) to connect to the cluster's public network endpoint. | Edit → (no-op) |
 | Proxy | `success` Enabled | Identity-based public proxy address managed by HCP… | Edit → (no-op) |
-| **Gateway** | Day 0: `neutral` Disabled / Day N: `success` Enabled • 3 sites | Connect your private network sites to HCP Vault using encrypted tunnels. | Edit → → **S1** (Day 0) or **S8** (Day N) |
+| **Gateway** | Day 0: `neutral` Disabled / Day N: `success` Enabled • 1 site | Connect your private network sites to HCP Vault using encrypted tunnels. | Edit → → **S1** (Day 0) or **S8** (Day N) |
 
 #### Right column — Communication setup
 
@@ -143,7 +142,7 @@ Fixed left rail (`width: 224 px`, white, `border-right: #E5E5E5`), below header.
 
 **Heading:** Gateways
 
-**Top-right CTA:** `Enable Gateways` button (background `#0C56E9`, white text) → opens `enable-gateways` modal.
+**Top-right CTA:** `Enable Gateways` button (background `#0C56E9`, white text) → S2.
 
 **Body:**
 - Introductory paragraph with "Learn more about HVD gateways" link.
@@ -161,25 +160,6 @@ Fixed left rail (`width: 224 px`, white, `border-right: #E5E5E5`), below header.
 
 ---
 
-### Modal — Enable Gateways (overlay on S1)
-
-**Trigger:** "Enable Gateways" button on S1.
-
-**Title:** Enable gateways  
-**Top border:** `#1A1A1A`
-
-**Body:**
-- Paragraph: Enabling gateways will deploy one dataplane gateway per AZ. Gateways operate in active/passive configuration.
-- `neutral` Alert: "One gateway will be deployed per availability zone." — Dataplane gateways are managed by HCP and cannot be removed individually.
-
-**Footer:**
-| Button | Action |
-|--------|--------|
-| Cancel (secondary) | Closes modal, returns to S1 |
-| Enable (primary) | → S2 (Enable gateways form) |
-
----
-
 ### S2 — Enable Gateways Form (Routing Table)
 
 **Breadcrumb:** … / Cluster networking / Gateways
@@ -194,27 +174,25 @@ Fixed left rail (`width: 224 px`, white, `border-right: #E5E5E5`), below header.
 | Button | Action |
 |--------|--------|
 | Cancel (secondary) | → S1 |
-| Enable Gateways (primary) | → S3, sets `gatewaysEnabled: true` |
+| Deploy gateways (primary) | → S3, sets `gatewaysEnabled: true` |
 
 #### V1 vs V2 routing table layout
 
+Both V1 and V2 use the same 4-column layout (`1fr 1fr 160px 36px`): Network site name, CIDR blocks, Gateway zone (locked/auto-assigned), delete. The Gateway zone column is read-only for both versions. The differences are:
+
 | Aspect | V1 | V2 |
 |--------|----|----|
-| Pre-populated rows | **1** (nyc only) | 4 (nyc, nj, fl, ga) |
+| Pre-populated rows | **1** (single blank row with zone `us-east-1a`) | 4 (nyc, nj, fl, ga) |
 | "Add network" link | **Hidden** | Visible |
-| Column count | **5** | 4 |
-| Grid template | `1fr 1fr 180px 180px 36px` | `1fr 1fr 180px 36px` |
-| Column 3 header | **"Primary gateway zone"** | "Gateway zone" |
-| Column 4 header | **"Backup gateway zone"** (AZ select, default `us-east-1b`) | *(delete icon — no backup zone column)* |
-| Max container width | `1000px` | `800px` |
-
-The `Network` row type is `{ name: string; cidrs: string; zone: string; backupZone?: string }`. The `backupZone` field is only rendered as a column in V1.
+| Column count | 4 | 4 |
+| Grid template | `1fr 1fr 160px 36px` | `1fr 1fr 160px 36px` |
+| Max container width | `800px` | `800px` |
 
 **V1 pre-populated row:**
 
-| Name | CIDRs | Primary zone | Backup zone |
-|------|-------|-------------|------------|
-| nyc | 192.168.0.0/24, 192.168.10.99/32 | us-east-1a | us-east-1b |
+| Name | CIDRs | Gateway zone |
+|------|-------|-------------|
+| (blank) | (blank) | us-east-1a (locked) |
 
 **V2 pre-populated rows:**
 
@@ -237,34 +215,45 @@ The `Network` row type is `{ name: string; cidrs: string; zone: string; backupZo
 
 **Body (top to bottom):**
 1. `success` Alert: "Gateways enabled" — Dataplane gateways are active in each AZ. Add a site to connect your first private network.
-2. **Dataplane Health Strip** — four AZ pills, each with a green checkmark: `us-east-1a`, `us-east-1b`, `us-east-1c`, `us-east-1d`.
+2. **Dataplane Health Strip** — V1: 1 AZ pill (`us-east-1a`); V2: 4 pills (`us-east-1a`, `us-east-1b`, `us-east-1c`, `us-east-1d`). Each pill shows a green "Healthy" checkmark.
 3. **Empty state** — "No sites configured" — "Add your first gateway site to connect a private network to HCP Vault." — `Add site` → S4.
 
 ---
 
-### S4 — Add Site: Step 1 of 4 — Deployment Model
+### S4 — Add Site: Step 1 of 4 — Prerequisites
 
 **Breadcrumb:** … / Gateways / Add site
 
 **Heading:** Add site
 
-**Step indicator:** 4-pip progress bar, Step 1 active.
+**Step indicator:** 4-pip progress bar — Prerequisites / Configure / Install / Verify — Step 1 active.
 
 **Body:**
-- Sub-heading: "Choose how to run the gateway agent"
-- Description paragraph.
-- Two **RadioCard** options:
+- Sub-heading: "Prerequisites"
+- Description: "Confirm your environment meets these requirements before adding a site. The gateway agent runs as a Docker container inside your network."
+- 10-item advisory checklist (checkboxes, not hard-gated):
 
-| Option | Description |
-|--------|-------------|
-| **Binary** (default selected) | Single compiled executable. No container runtime required. Preferred by security teams for its minimal dependency footprint. |
-| Docker | Container image. Preferred for teams already running container platforms. Pull from the HashiCorp registry and run with standard Docker flags. |
+| Requirement | Learn more |
+|-------------|-----------|
+| Linux host — kernel ≥ 5.8 | Link |
+| Docker runtime installed | Link |
+| Host networking (--network host) | Link |
+| NET_ADMIN capability | Link |
+| SYS_MODULE capability | Link |
+| Compute: 8 GB RAM, 20 GB storage | — |
+| Outbound HTTPS allowed | — |
+| Outbound UDP 51820 allowed | — |
+| Public DNS resolution | — |
+| HCP service principal created | Link |
+
+- If "Next →" is clicked with any unchecked items: a `warning` Alert appears inline — "Some prerequisites are unchecked." with "Continue anyway" secondary button.
 
 **Footer:**
 | Button | Action |
 |--------|--------|
 | Cancel (secondary) | → S3 |
-| Next → (primary) | → S5 |
+| Next → (primary) | → S5 (or shows warning if items unchecked) |
+| Continue anyway (secondary, conditional) | → S5 regardless |
 
 ---
 
@@ -287,9 +276,6 @@ The `Network` row type is `{ name: string; cidrs: string; zone: string; backupZo
 
 **Alert:** `neutral` — "Source IP addresses are preserved in Vault audit logs."
 
-**Advanced options** (Disclosure, collapsed by default):
-- Collapsed by default; content omitted from current prototype iteration.
-
 **Footer:**
 | Button | Action |
 |--------|--------|
@@ -307,22 +293,25 @@ The `Network` row type is `{ name: string; cidrs: string; zone: string; backupZo
 
 **Step indicator:** Step 3 active.
 
-**Tabs:** Binary | Docker (defaults to whichever `deployModel` was chosen in S4)
+**Content:** Single section — "Run the gateway container" — one `docker run` `CodeBlock`:
 
-**Binary tab content:**
+```
+docker run -d \
+  --name vault-gateway \
+  --network host \
+  --cap-add NET_ADMIN \
+  --cap-add SYS_MODULE \
+  -e HCP_ORGANIZATION_ID=[org-id] \
+  -e HCP_PROJECT_ID=[project-id] \
+  -e HCP_CLUSTER_ID=[cluster-id] \
+  -e HCP_CLIENT_ID=[client-id] \
+  -e HCP_CLIENT_SECRET=[client-secret] \
+  hashicorp/hcp-vault-gateway:[version]
+```
 
-1. Download the gateway agent — `curl` + `unzip` + `chmod` code block.
-2. Create the config file — `gateway.hcl` code block (role, site, cred_file, log_level).
-3. Run the gateway agent — `./hcp-vault-gateway -config=gateway.hcl` code block.
+Code block has a **Copy** button.
 
-**Docker tab content:**
-
-1. Pull the gateway image — `docker pull hashicorp/hcp-vault-gateway:1.2.1` code block.
-2. Run the gateway container — `docker run` with `--cap-add NET_ADMIN`, volume mount, env vars code block.
-
-Each code block has a **Copy** button (top-right corner).
-
-**Alert:** `neutral` — "Keep the agent running before proceeding."
+**Alert:** `neutral` — "Keep the agent running before proceeding to verification."
 
 **Footer:**
 | Button | Action |
@@ -354,7 +343,9 @@ The card content changes based on `s7State`:
 - Green checkmark circle (`#E8F7EE` bg, `#1A7F4B` border).
 - "Connected"
 - "Site **nyc-prod** is active and healthy."
-- "2/2 gateways active · v1.2.1"
+- Two-row check list inside a bordered box:
+  - Site gateway → `success` Connected
+  - Primary dataplane → `success` Active
 
 | Button | Action |
 |--------|--------|
@@ -365,9 +356,9 @@ The card content changes based on `s7State`:
 - "Connection not established"
 - `warning` Alert: "No tunnel detected after 5 minutes."
 - Three failure categories with explanations:
-  - Agent not started
-  - Credential error
-  - Network block (outbound UDP 51820)
+  - Agent not authenticated
+  - Tunnel interface not established
+  - Network block
 
 | Button | Action |
 |--------|--------|
@@ -386,16 +377,16 @@ The card content changes based on `s7State`:
 
 | Control | V1 | V2 |
 |---------|----|----|
-| Table/Topology dropdown | **Hidden** | Visible — dropdown showing "Table" or "Topology" options (switches `s8View`) |
-| Add site button | **Hidden** (V1 supports only one site) | Visible — `Add site` → S4 |
+| Table/Topology toggle | **Hidden** | Visible — inline Table / Topology segmented button (switches `s8View`) |
+| Add site button | **Hidden** (V1 single-site model) | Visible — `Add site` → S4 |
 
 #### Dataplane Gateways strip (both versions)
 
-An `inline-flex` strip displayed below the alert. AZ chips differ by version:
+An `inline-flex` strip displayed below the header. AZ chips differ by version:
 
 | Version | Chips shown | Labels |
 |---------|------------|--------|
-| **V1** | 2 chips: `us-east-1a`, `us-east-1b` | "Primary" and "Backup" respectively |
+| **V1** | **1 chip**: `us-east-1a` | No label |
 | **V2** | 4 chips: `us-east-1a`, `us-east-1b`, `us-east-1c`, `us-east-1d` | No labels |
 
 #### Table view (`s8View: 'table'`)
@@ -416,45 +407,39 @@ Columns: **Site | Status | Site gateway | Dataplane | Last seen | Actions** (eac
 | nj-dr *(link → S9)* | `warning` Degraded | 1/2 | us-east-1b | 8 min ago | ⋯ |
 | fl-branch *(link → S9)* | `offline` Not connected | — | — | Never | ⋯ |
 
-Alerts below V2 table only:
-- `warning`: "nj-dr is degraded." — 1 of 2 gateways active. Gateway unresponsive — last heard 2025-07-14 04:59:00 UTC.
-- `neutral`: "fl-branch has not connected." — No tunnel has been established. Verify the gateway agent is running and outbound UDP port 51820 is open.
+Expandable row alerts (V2 only, expanded by default):
+- nj-dr row expand → `warning`: "nj-dr is degraded — Backup gateway unreachable." / "Your tunnel is active but failover protection is unavailable."
+- fl-branch row expand → `neutral`: "fl-branch has not connected — The gateway agent has not established a tunnel." / "Verify the agent is running and outbound UDP 51820 is open."
 
-**Actions kebab menu** (order: Remove → Gateways → Edit):
+**Actions kebab menu** (order: Remove → Edit):
 
 | Item | Style | Action |
 |------|-------|--------|
-| Remove | Destructive red | Opens remove confirmation modal |
-| Gateways | Default | → S9 (site detail) |
+| Remove | Destructive red | Opens remove confirmation modal → navigates to S1 (`gatewaysEnabled: false`) |
 | Edit | Default | No-op |
 
 #### Topology view (`s8View: 'topology'`) — V2 only
 
 Three-column layout:
 
-**Left — Site Gateways** (clickable cards → S9):
+The topology uses `TopologyView` → `AzGroupRow` components. Sites are grouped by AZ. Unrouted/disconnected sites (`az: -1`) appear at the top with a stub dashed connector and `?` indicator.
 
-| Site | CIDRs | Status |
-|------|-------|--------|
-| nyc-prod | 192.168.0.0/24, 192.168.10.99/32 | `success` Healthy |
-| nj-dr | 10.99.0.0/24, 10.99.1.0/24 | `warning` Degraded — "Gateway unresponsive, last heard 2025-07-14 04:59:00 UTC" |
-| fl-branch | 192.34.0.0/24 | `offline` Not connected — "No routing set up for this gateway" |
+**Column headers:** "Site Gateways" (left) and "Dataplane Gateways" (right, 256 px fixed width).
 
-**Center — SVG connector lines:**
-- nyc-prod → us-east-1a (solid gray)
-- nj-dr → us-east-1b (dashed amber)
-- fl-branch → dangling dashed line with `?` circle (unconnected)
+**Unrouted sites (top section):** `mia-dr` — `offline` Not connected — "◆ No routing configured for this site"
 
-Line endpoints are measured at runtime via `getBoundingClientRect` and a `ResizeObserver`.
+**AZ groups** (one row per AZ that has connected sites):
 
-**Right — Dataplane Gateways:**
+| AZ | Sites in group |
+|----|---------------|
+| us-east-1a | nyc-prod (Healthy), nj-dr (Degraded — "◆ Gateway unresponsive, last heard 2026-07-14 04:59 UTC"), bos-dev (Healthy) |
+| us-east-1b | atl-corp (Healthy), fl-branch (Healthy), chi-hq (Degraded — "◆ Packet loss detected on tunnel interface") |
+| us-east-1c | dal-dc (Healthy), la-west (Healthy) |
+| us-east-1d | sea-edge (Healthy) |
 
-| AZ | Status |
-|----|--------|
-| us-east-1a | `success` Healthy |
-| us-east-1b | `success` Healthy |
-| us-east-1c | `success` Healthy |
-| us-east-1d | `success` Healthy |
+Each AZ card shows: AZ name, `success` Healthy badge, site count, degraded count (amber if > 0).
+
+**Connector lines:** Measured at runtime via `getBoundingClientRect` + `ResizeObserver`. Healthy = solid `#CCCCCC`; Degraded = dashed `#B08000` 4 3 pattern.
 
 ---
 
@@ -471,55 +456,56 @@ Line endpoints are measured at runtime via `getBoundingClientRect` and a `Resize
 
 Three site variants share the same layout. Content differences below.
 
+The S9 layout is a 2-column grid (max-width 980 px). Column widths: `1fr 320px`. Two rows:
+- Row 1: Site gateway card (left) + Disaster recovery card or Gateway agent card (right, version-dependent)
+- Row 2: Topology card (left) + Gateway agent card (right, V2 only)
+
+**V1 layout:** Row 1 Right = Gateway agent card (no DR card). Row 2 Right = empty.
+**V2 layout:** Row 1 Right = Disaster recovery card (hidden for fl-branch). Row 2 Right = Gateway agent card.
+
 #### Variant: `nyc-prod` — Healthy
 
 **Alert:** none
 
-**Configuration card:**
+**Site gateway card (left):**
 
 | Field | Value |
 |-------|-------|
 | Site name | `nyc-prod` (mono) |
 | Status | `success` Healthy |
-| Active gateways | 2 of 2 |
 | Last seen | 2 min ago |
-| Deployment model | Binary |
-| Agent version | `v1.2.1` (mono) |
 | Network site CIDRs | `192.168.0.0/24 · 192.168.10.99/32` (mono) |
 
-**High availability card:**
+**Disaster recovery card (V2, Row 1 Right):**
 
 | Field | Value |
 |-------|-------|
-| Paired DR site | `nj-dr` |
-| Failover status | `success` Ready |
-
-Note: "Failover is automatic. If this site becomes unreachable, traffic will route through nj-dr."
+| Primary gateway | us-east-1a — `success` Active |
+| Backup gateway | us-east-1b — `neutral` Ready |
+| (footer copy) | "Failover is automatic. If the primary gateway becomes unreachable, your connection will route through the backup." |
 
 ---
 
 #### Variant: `nj-dr` — Degraded
 
-**Alert:** `warning` — "Gateway unresponsive — last heard 2025-07-14 04:59:00 UTC" — 1 of 2 gateways active. Check gateway agent in all configured AZs. Verify outbound UDP 51820 is open.
+**Alert:** `warning` — "Gateway unresponsive — last heard 2025-07-14 04:59:00 UTC" — 1 of 2 gateways active. Check that the gateway agent is running in all configured availability zones. Verify outbound UDP port 51820 is open.
 
-**Configuration card:**
+**Site gateway card (left):**
 
 | Field | Value |
 |-------|-------|
 | Site name | `nj-dr` (mono) |
 | Status | `warning` Degraded |
-| Active gateways | **1 of 2** ↓ 1 unresponsive (amber) |
-| Last seen | **2025-07-14 04:59:00 UTC** (amber) |
-| Deployment model | Binary |
-| Agent version | `v1.2.1` (mono) |
+| Last seen | **2025-07-14 04:59 UTC** (amber) |
 | Network site CIDRs | `10.99.0.0/24 · 10.99.1.0/24` (mono) |
 
-**High availability card:**
+**Disaster recovery card (V2, Row 1 Right):**
 
 | Field | Value |
 |-------|-------|
-| Paired DR site | `nyc-prod` |
-| Failover status | `warning` Degraded |
+| Primary gateway | us-east-1a — `success` Active |
+| Backup gateway | us-east-1b — `warning` Down |
+| (footer copy) | "Failover is automatic…" |
 
 ---
 
@@ -527,23 +513,31 @@ Note: "Failover is automatic. If this site becomes unreachable, traffic will rou
 
 **Alert:** `neutral` — "No tunnel established." — The gateway agent has not connected yet. Verify the agent is running and can reach HCP on outbound UDP port 51820.
 
-**Configuration card:**
+**Site gateway card (left):**
 
 | Field | Value |
 |-------|-------|
 | Site name | `fl-branch` (mono) |
 | Status | `offline` Not connected |
-| Active gateways | 0 of 2 (muted) |
 | Last seen | Never |
-| Deployment model | Docker |
-| Agent version | `v1.2.1` (mono) |
 | Network site CIDRs | `192.34.0.0/24` (mono) |
 
-**High availability card:** not shown (fl-branch has no paired site).
+**Disaster recovery card:** not shown for fl-branch (replaced by empty `<div />`).
 
 ---
 
-#### Gateway agent card (all S9 variants)
+#### Topology card (Row 2 Left, all variants)
+
+```
+[Site Gateway box]  ──── Encrypted tunnel ────  [Dataplane us-east-1a  Active]
+                                                 [Dataplane us-east-1b  Standby]  ← V2 only
+```
+
+- fl-branch: dashed grey line with `?` circle and "No tunnel established" label.
+- nyc-prod / nj-dr: solid green line to us-east-1a Active; V2 adds dashed grey L-shape to us-east-1b Standby/Unresponsive (rendered behind the solid line, z-index: 1 on solid).
+- V1: only Active gateway box shown; Standby/Backup box hidden.
+
+#### Gateway agent card
 
 - "The gateway agent runs inside your network. You are responsible for deployment and updates."
 - View install instructions (secondary sm) → opens **Install slide-over** panel.
@@ -553,16 +547,17 @@ Note: "Failover is automatic. If this site becomes unreachable, traffic will rou
 #### Remove site modal
 
 - **Title:** Remove {site}? (top border `#5C1111`)
-- `warning` Alert: "This action will tear down the WireGuard tunnel." — All traffic routed through this site will be interrupted immediately. This cannot be undone.
+- `warning` Alert: "This action will tear down the encrypted tunnel and remove the gateway." — All traffic interrupted immediately. The site gateway agent will be deauthorized and the dataplane gateway removed. Gateways must be re-enabled to reconnect. This cannot be undone.
+- Text confirmation input: user must type `remove` (case-insensitive) to enable the Remove button.
 - Cancel → closes modal.
-- Remove site (critical) → closes modal, → S8.
+- Remove (critical, enabled only after confirmation) → closes modal → **S1** (`gatewaysEnabled: false`, `siteAdded: false`).
 
 #### Install slide-over panel
 
 Right-side drawer (`width: 580 px`, overlays content, backdrop closes it).
 
 - Header: "Install instructions" + × close button.
-- Body: same Binary / Docker tabbed install content as S6, defaulting to the site's deployment model (`docker` for fl-branch, `binary` for others).
+- Body: same Docker `docker run` install content as S6 (single code block, no tabs).
 
 ---
 
@@ -572,13 +567,11 @@ Right-side drawer (`width: 580 px`, overlays content, backdrop closes it).
 |-----------|-----------------|---------|
 | `Badge` | `neutral`, `success`, `warning`, `critical`, `offline` | All screens |
 | `Button` | `primary`, `secondary`, `critical`, `tertiary`; size `default`/`sm` | All screens |
-| `Alert` | `neutral`, `warning`, `success` | S1 modal, S3, S5, S6, S7, S8, S9 |
+| `Alert` | `neutral`, `warning`, `success` | S3, S4, S5, S6, S7, S8, S9 |
 | `Card` | configurable `padding` prop | S7, S9 |
 | `FormField` | `text`, `password`, `textarea`; `mono`, `required` | S5 |
-| `RadioCard` | `selected` boolean | S4 |
 | `CodeBlock` | Copy-to-clipboard button | S6, S9 slide-over |
-| `Tabs` | array of `{id, label}` | S6, S9 slide-over |
-| `StepIndicator` | `current`, `total`, `label` | S4, S5, S6, S7 |
+| `StepIndicator` | `current`, `steps[]`, optional `onStepClick` | S4, S5, S6, S7 |
 | `NetworkCard` | `badge`, `description`, optional `onEdit` | S0 |
 | `EmptyState` | optional `icon`, optional `image`, optional `cta` | S3 |
 | `DataplaneHealthStrip` | array of AZ strings | S3 |
@@ -598,7 +591,7 @@ Right-side drawer (`width: 580 px`, overlays content, backdrop closes it).
 
 **Prompt:** "Your team wants to connect a private data center to HCP Vault without exposing it to the public internet. Where would you start, and how would you enable that connection?"
 
-**Expected path:** S0 → Gateway card Edit → S1 → Enable Gateways → modal → Enable → S3.
+**Expected path:** S0 → Gateway card Edit → S1 → Enable Gateways → S2 → Deploy gateways → S3.
 
 ---
 
@@ -609,7 +602,7 @@ Right-side drawer (`width: 580 px`, overlays content, backdrop closes it).
 
 **Expected path:** S3 → Add site → S4 → S5 → S6 → S7 (auto-connects) → S8.
 
-**Observer notes:** Watch for hesitation on deployment model choice (S4), CIDR field (S5), and install instructions tab default (S6).
+**Observer notes:** Watch for hesitation on the prerequisites checklist (S4), CIDR field (S5), and the install command (S6).
 
 ---
 

@@ -1,0 +1,6 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000', 'secondaryColor': '#ffffff', 'tertiaryColor': '#ffffff', 'background': '#ffffff', 'mainBkg': '#ffffff', 'nodeBorder': '#000000', 'clusterBkg': '#ffffff', 'titleColor': '#000000', 'edgeLabelBackground': '#ffffff', 'fontFamily': 'Arial'}}}%%
+flowchart TD
+    A["S2 - Enable Gateways\n\nVPC routing table configuration\nNetwork name + CIDR + AZ zone\n\nHCP deploys dataplane gateways\n1 per AZ active/passive"]
+    B["S4-S7 - Add Site wizard\n\nPeer registration\nSite name + service principal\n+ Network site CIDRs\n\nCustomer registers their gateway\nagent as a WireGuard peer"]
+
+    A -->|"Gateways deployed\nno peers yet - S3"| B

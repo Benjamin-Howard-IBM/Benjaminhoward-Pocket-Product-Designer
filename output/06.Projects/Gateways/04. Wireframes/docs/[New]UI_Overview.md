@@ -23,7 +23,7 @@ flowchart TD
 
     S3["S3 · Enabled, No Sites"] -->|"Add site"| S4
 
-    S4["S4 · Add Site — Deployment Model"] -->|"Next"| S5
+    S4["S4 · Add Site — Prerequisites"] -->|"Next"| S5
     S4 -->|"Cancel"| S3
 
     S5["S5 · Add Site — Configure"] -->|"Next"| S6
@@ -60,7 +60,7 @@ All state is held in a single `AppState` object at the root `App` component. A `
 | `siteAdded` | `boolean` | `false` | Controls Add site affordance; hidden after first site in V1 |
 | `version` | `'V1' \| 'V2'` | `'V2'` | Active prototype version; set by the V1/V2 switcher in AppHeader |
 
-**Removed fields:** `modal` (S2 is a full-page form, not a modal) and `deployModel` (Binary deferred to V2; Docker is the only V1 path).
+**Removed fields:** `modal` (S2 is a full-page form, not a modal) and `deployModel` (Docker is the only current install path; no binary tab in S6).
 
 **Scenario presets** (`DAY0` / `DAYN`) are full `AppState` objects applied when the scenario toggle fires. Both presets default to `version: 'V2'`. Switching version preserves the current scenario.
 
@@ -99,7 +99,7 @@ Content wrapper div: `marginLeft: 224`, `paddingTop: 48`, `px-10 py-6`. Wraps al
 - Two-column `NetworkCard` grid (max 1100 px)
 - Left column — Connection security: Cluster accessibility, IP Allow list, Proxy, **Gateway** (dynamic badge)
 - Right column — Communication setup: HVN, Private link, Custom DNS forwarding, Custom domain
-- Gateway card badge: `Enabled • 3 sites` (success) when `gatewaysEnabled`, `Disabled` (neutral) otherwise
+- Gateway card badge: `Enabled • 1 site` (success) when `gatewaysEnabled`, `Disabled` (neutral) otherwise
 
 **Navigation targets:**
 
@@ -191,7 +191,7 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 - Title "Gateways" + `Badge success "Enabled"`
 - "Add site" primary button
 - `Alert success` — "Gateways enabled — Add a site to connect your first private network."
-- **Dataplane health strip** — horizontal bar with Vault logo tile, "Dataplane Gateways" label, and 4 AZ chips (us-east-1a/b/c/d) each with a green "Healthy" pill
+- **Dataplane health strip** — horizontal bar with Vault logo tile, "Dataplane Gateways" label, and AZ chips each with a green "Healthy" pill. V1: 1 chip (us-east-1a); V2: 4 chips (us-east-1a/b/c/d).
 - `EmptyState` — "No sites configured" with "Add site" CTA
 
 **Navigation targets:**
@@ -212,14 +212,16 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 **Key UI elements:**
 - `StepIndicator current={1}` — steps: Prerequisites, Configure, Install, Verify
 - 10-item advisory checklist (Linux kernel ≥ 5.8, Docker runtime, host networking, NET_ADMIN, SYS_MODULE, compute minimums, outbound HTTPS, outbound UDP 51820, public DNS, HCP service principal)
-- Soft `warning` Alert if Next is clicked with unchecked items
-- Footer: "Cancel" · "Next →"
+- Soft `warning` Alert inline if Next is clicked with unchecked items: "Some prerequisites are unchecked." + "Continue anyway" button
+- Footer: "Cancel" · "Next →" · "Continue anyway" (conditional)
 
 **Navigation targets:**
 
 | Action | Destination |
 |---|---|
-| Next | S5 |
+| Next (all checked) | S5 |
+| Next (items unchecked) | Shows inline warning; stays on S4 |
+| Continue anyway | S5 |
 | Cancel | S3 |
 
 ---
@@ -230,7 +232,7 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 
 **Breadcrumb:** ... > Gateways > Add site
 
-**Local state:** `siteName`, `clientId`, `tunnelLife`
+**Local state:** `siteName`, `clientId`
 
 **Key UI elements:**
 - `StepIndicator current={2}`
@@ -239,8 +241,7 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 - `FormField` — Service principal client secret (required, password)
 - `FormField` — Network site CIDRs (textarea)
 - `Alert neutral` — source IPs appear in Vault audit logs
-- `Disclosure` — "Extend tunnel life" with 4 inline radio options (0/15/30/60 min)
-- Footer: "← Back" · "Next →"
+- Footer: "← Back" · "Cancel" · "Next →"
 
 **Navigation targets:**
 
@@ -259,11 +260,9 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 
 **Key UI elements:**
 - `StepIndicator current={3}`
-- `InstallContent` component — tabbed view (Binary / Docker), default tab driven by `state.deployModel`:
-  - **Binary tab:** 3 numbered `CodeBlock`s — download curl command, `gateway.hcl` config file, run command
-  - **Docker tab:** 2 numbered `CodeBlock`s — docker pull, docker run (with `NET_ADMIN` cap)
-- `Alert neutral` — keep agent running before proceeding
-- Footer: "← Back" · "Start verification →"
+- `InstallContent` component — single section "Run the gateway container" with one `docker run` `CodeBlock` (includes `--network host`, `--cap-add NET_ADMIN`, `--cap-add SYS_MODULE`, and all env vars). No tabs.
+- `Alert neutral` — "Keep the agent running before proceeding to verification."
+- Footer: "← Back" · "Cancel" · "Start verification →"
 
 **Navigation targets:**
 
@@ -287,7 +286,7 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 | Sub-state | Display |
 |---|---|
 | **`pending`** | Spinning circle animation · "Waiting for connection..." · "Simulate connection failure" link |
-| **`connected`** | Green checkmark · "Connected" · "nyc-prod is active and healthy · 2/2 gateways active · v1.2.1" · "Done" + "View site →" buttons |
+| **`connected`** | Green checkmark · "Connected" · "nyc-prod is active and healthy." · 2-row check box (Site gateway: Connected / Primary dataplane: Active) · "Done" + "View site →" buttons |
 | **`failed`** | Left-aligned · "Connection not established" · `Alert warning` · 3 diagnostic categories · "Exit without saving" + "Retry verification" |
 
 **Auto-advance:** A `useEffect` fires a 3-second `setTimeout` when `s7State === 'pending'`, advancing to `connected`.
@@ -314,19 +313,19 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 
 | Aspect | V1 | V2 |
 |---|---|---|
-| Table/Topology dropdown | Hidden | Visible |
-| Add site button | Hidden (single-site model) | Visible when `siteAdded: false` |
-| Dataplane AZ chips | 2: Primary (us-east-1a) + Backup (us-east-1b) with labels | 4: us-east-1a/b/c/d, no labels |
+| Table/Topology toggle | Hidden | Visible (inline segmented button) |
+| Add site button | Hidden (single-site model) | Visible (always) |
+| Dataplane AZ chips | **1 chip**: us-east-1a, no label | 4: us-east-1a/b/c/d, no labels |
 | Table rows | 1: nyc-prod only | 3: nyc-prod, nj-dr, fl-branch |
-| Expandable rows | None | nj-dr and fl-branch (degraded/offline alert rows) |
+| Expandable rows | None | nj-dr and fl-branch (degraded/offline alert rows, expanded by default) |
 
 **Key UI elements (V2):**
-- Header: "Gateways" title + `Badge success "Enabled"` + Table/Topology dropdown + "Add site" button
+- Header: "Gateways" title + `Badge success "Enabled"` + Table/Topology segmented toggle + "Add site" button
 - **Dataplane health strip** — `inline-flex`, Vault logo tile · "Dataplane Gateways" label · vertical divider · AZ chips with green "Healthy" pills
 
 **Key UI elements (V1):**
-- Header: "Gateways" title + `Badge success "Enabled"` (no dropdown, no Add site button)
-- **Dataplane health strip** — `inline-flex`, Vault logo tile · "Dataplane Gateways" label · vertical divider · 2 chips with "Primary:" / "Backup:" labels
+- Header: "Gateways" title + `Badge success "Enabled"` (no toggle, no Add site button)
+- **Dataplane health strip** — `inline-flex`, Vault logo tile · "Dataplane Gateways" label · vertical divider · 1 chip (us-east-1a) with green "Healthy" pill
 
 **Table columns (both versions):**
 
@@ -344,8 +343,8 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 | Site | Status | Last seen |
 |---|---|---|
 | nyc-prod | Healthy | 2 min ago |
-| nj-dr | Degraded (expandable → warning alert) | 2025-07-14 04:59 UTC |
-| fl-branch | Not connected (expandable → neutral alert) | Never |
+| nj-dr | Degraded (expandable → "nj-dr is degraded — Backup gateway unreachable. / Your tunnel is active but failover protection is unavailable.") | 2025-07-14 04:59 UTC |
+| fl-branch | Not connected (expandable → "fl-branch has not connected — The gateway agent has not established a tunnel. / Verify the agent is running and outbound UDP 51820 is open.") | Never |
 
 **V1 table rows (Day N):** nyc-prod only.
 
@@ -360,8 +359,7 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 | Site name click (table) | S9 (`s9Site = <name>`) |
 | Site card click (topology, V2) | S9 (`s9Site = <name>`) |
 | Table/Topology dropdown (V2) | updates `s8View` only |
-| Row ⋯ → Gateways | S9 (`s9Site = <name>`) |
-| Row ⋯ → Remove | opens `RemoveGatewayModal` |
+| Row ⋯ → Remove | opens `RemoveGatewayModal` → confirms → S1 (`gatewaysEnabled: false`) |
 
 ---
 
@@ -381,35 +379,46 @@ Note: `tunnelLife` field removed (DD-010 — no RFC backing).
 
 **Main grid** (2 columns, max 980 px):
 
-**Left — Configuration card:**
-- `DescriptionList` — 7 items: Site name, Status, Active gateways, Last seen, Deployment model, Agent version, Network site CIDRs
+The S9 layout is a 2×2 grid (max-width 980 px, columns `1fr 320px`). V1 and V2 differ in right-column content:
 
-**Right — 2 stacked cards:**
-- **High availability** (hidden for fl-branch): Paired DR site link, failover status badge, failover description
-- **Gateway agent:** Description, "View install instructions" button (opens `InstallSlideOver`), "View update instructions" button, version with "New version available" warning badge
+**V1:** Row 1 Right = Gateway agent card. Row 2 Right = empty.
+**V2:** Row 1 Right = Disaster recovery card (hidden for fl-branch). Row 2 Right = Gateway agent card.
 
-**Site topology diagram** (below grid, inside a `Card`):
+**Left (Row 1) — Site gateway card:**
+- `DescriptionList` — 4 items: Site name (mono), Status badge, Last seen, Network site CIDRs (mono)
+
+**Right (Row 1, V2) — Disaster recovery card** (hidden for fl-branch):
+- "Primary gateway" — us-east-1a — `success` Active
+- "Backup gateway" — us-east-1b — `neutral` Ready (or `warning` Down for nj-dr)
+- Footer copy: "Failover is automatic. If the primary gateway becomes unreachable, your connection will route through the backup."
+
+**Gateway agent card** (Row 1 Right in V1, Row 2 Right in V2):
+- Description, "View install instructions" button (opens `InstallSlideOver`), "View update instructions" (no-op), version chip: `Current: v1.2.1` + "New version available" (amber)
+
+**Topology card** (Row 2 Left, all variants):
 
 ```
-[Site Gateway box]  ──── tunnel ────  [Dataplane us-east-1a Active]
-                                      [Dataplane us-east-1b Passive]
+[Site Gateway box]  ──── Encrypted tunnel ────  [Dataplane us-east-1a  Active]
+                                                 [Dataplane us-east-1b  Standby]  ← V2 only
 ```
 
-Tunnel is solid green for `nyc-prod` / `nj-dr`, dashed grey + "?" for `fl-branch`.
+- fl-branch: dashed grey line + `?` circle + "No tunnel established" label.
+- nyc-prod / nj-dr: solid green line to Active; V2 adds dashed grey L-shape to Standby (rendered behind solid line).
+- V1: only Active gateway box shown; Standby box hidden.
 
 **Modals & panels:**
 
 | Trigger | Component | Content |
 |---|---|---|
-| "Remove site" button | `Modal` (topBorderColor `#5C1111`) | Tear-down warning + Remove / Cancel |
-| "View install instructions" | `InstallSlideOver` (580 px right panel) | `InstallContent` (Binary or Docker tab) |
+| "Remove site" button | `Modal` (topBorderColor `#5C1111`) | Tear-down warning · type `remove` to confirm · Remove (critical, gated) / Cancel |
+| "View install instructions" | `InstallSlideOver` (580 px right panel) | `InstallContent` (single Docker run block, no tabs) |
 
 **Navigation targets:**
 
 | Action | Destination |
 |---|---|
 | ← Gateways button | S8 |
-| Remove site (confirm) | S8 |
+| Remove site (confirm) | S1 (`gatewaysEnabled: false`, `siteAdded: false`) |
 
 ---
 
@@ -487,7 +496,7 @@ Ten sites powering the S8 topology view:
 | Name | CIDRs | Health | AZ | Note |
 |---|---|---|---|---|
 | nyc-prod | 192.168.0.0/24, 192.168.10.99/32 | Healthy | us-east-1a | — |
-| nj-dr | 10.99.0.0/24, 10.99.1.0/24 | Degraded | us-east-1a | Gateway unresponsive, last heard 2026-07-14 04:59 UTC |
+| nj-dr | 10.99.0.0/24, 10.99.1.0/24 | Degraded | us-east-1a | ◆ Gateway unresponsive, last heard 2026-07-14 04:59 UTC |
 | bos-dev | 10.10.0.0/24 | Healthy | us-east-1a | — |
 | atl-corp | 172.16.0.0/20 | Healthy | us-east-1b | — |
 | fl-branch | 192.34.0.0/24 | Healthy | us-east-1b | — |
