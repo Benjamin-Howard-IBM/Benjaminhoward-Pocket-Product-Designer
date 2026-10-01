@@ -21,6 +21,34 @@ When discussing features or capabilities, use the Jobs-to-be-Done framework. Foc
 
 ---
 
+## Career-level alignment (Designer 7 -> Designer 8)
+
+Current level: Designer 7. Target/one-level-above: Designer 8. Full band definitions in [Performance_Band_Guide(2).md](Performance_Band_Guide(2).md). Use this to keep day-to-day design decisions solidly meeting Band 7 expectations, while flagging concrete Band 8 opportunities as they genuinely appear - do not manufacture scope or narrative to force a Band 8 framing where it doesn't fit.
+
+**What Band 7 expects now:**
+- Frame work in terms of team/department objectives, not just the individual task.
+- Tie design decisions to the product's main business outcomes explicitly.
+- Apply Enterprise Design Thinking and user/client insight at an "Experienced" level.
+- Begin mentoring and sharing expertise; contribute to a psychologically safe environment.
+- Anticipate risks and adapt the plan when something isn't working.
+
+**What Band 8 adds (the level above):**
+- Guides functional objectives/technology direction, not just delivery on a single initiative.
+- Demonstrates - not just describes - how the work delivered measurable business outcomes (data-backed, not narrative).
+- Leads advocacy of design thinking practices across teams, not just within one.
+- Builds a T-shaped skill set into wing disciplines beyond the core specialty.
+- Takes and communicates a clear, sometimes contrarian point of view; comfortable failing fast on weak initiatives.
+- Uses data to make decisions faster; gives direct feedback rather than hedging.
+
+**Checklist to apply when reviewing or producing design work:**
+1. Does this connect to a stated business outcome, or just a task? If not, name the outcome explicitly before finishing.
+2. Is there a call being hedged as an "open question" that could instead be a documented decision with rationale? (Band 8 = courageous, clear perspective; Band 7 = anticipates risk but doesn't always commit.)
+3. Is there a metric or data source that could back this decision instead of narrative judgment?
+4. Does this work only benefit the immediate task, or could its pattern/reasoning be reused across a team or department? If reusable, say so and offer to generalize it.
+5. When wrapping up a piece of work, flag explicitly: "this is Band 7-safe" vs. "this is a Band 8 opportunity because ___" - only when the fit is real.
+
+---
+
 ## Research standards
 
 Benjamin conducts both foundational research (strategy, discovery, RFI analysis) and evaluative research (usability testing, interview sessions). Key standards:
