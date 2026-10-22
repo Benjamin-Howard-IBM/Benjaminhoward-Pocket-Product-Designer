@@ -1,0 +1,19 @@
+{
+	"servers": {
+		"figma": {
+			"url": "https://mcp.figma.com/mcp",
+			"type": "http"
+		},
+		"helios-design-system": {
+			"type": "stdio",
+			"command": "node",
+			"args": [
+				"${workspaceFolder}/hds-playground/node_modules/@hashicorp/design-system-mcp/dist/index.js"
+			],
+			"env": {
+				"HDS_MCP_PROJECT_ROOT": "${workspaceFolder}/hds-playground"
+			}
+		}
+	},
+	"inputs": []
+}

@@ -2,6 +2,8 @@
 
 This folder contains organized reference documentation for the Helios Design System, HashiCorp's design system for building consistent, accessible applications.
 
+Designs must use real HDS components verified with the `helios-design-system` MCP. See the MCP-first workflow in [claude.md](./claude.md).
+
 ## Official Resources
 
 - **Website**: https://helios.hashicorp.design/

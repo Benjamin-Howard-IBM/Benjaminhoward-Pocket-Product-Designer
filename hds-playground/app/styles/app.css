@@ -1,0 +1,21 @@
+/* HDS requires a global border-box reset. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--hds-page-color-faint);
+}
+
+.playground {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.playground__status {
+  margin-top: 24px;
+}

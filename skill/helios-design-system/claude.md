@@ -6,6 +6,26 @@ Official documentation: https://helios.hashicorp.design
 
 ---
 
+## MCP-first workflow (required)
+
+Designs that use Helios must use real HDS components. The `helios-design-system` MCP reads the HDS 7.0.0 catalogs installed in `hds-playground/`.
+
+1. `search_hds_components` - confirm the component exists and get its exact invocation name.
+2. `get_hds_component` - read its arguments, accepted values, and yielded contextual components. This is authoritative over prose docs.
+3. `search_hds_docs` (then `read_hds_docs`) - usage, accessibility, and pattern guidance.
+4. `search_hds_icons` / `search_hds_tokens` - verify every icon name and token before use.
+
+Before handing off, check:
+
+- [ ] Every component, argument, icon, and token was verified with the MCP, which reported `source.version` 7.x.
+- [ ] Components are imported from `@hashicorp/design-system-components/components`, not recreated with HTML/CSS.
+- [ ] Radio Card checked state is managed by the consumer. HDS does not enforce mutual exclusivity for Radio Cards.
+- [ ] Gaps where HDS has no fitting component are stated explicitly.
+
+Build runnable screens in `hds-playground/` (`npm start`, then open http://localhost:4200). Reference: `hds-playground/app/components/format-startup.gts`.
+
+HDS 7 is not compatible with Ember 7: its `ember-concurrency` dependency imports the legacy `ember` module. Keep `ember-source` on 6.x.
+
 ## Quick Reference
 
 ### Packages

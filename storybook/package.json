@@ -13,6 +13,7 @@
   "devDependencies": {
     "@carbon/layout": "^11.55.0",
     "@carbon/themes": "^11.77.0",
+    "@hashicorp/design-system-mcp": "^0.2.1",
     "@storybook/addon-a11y": "^8.0.0",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/react": "^8.0.0",

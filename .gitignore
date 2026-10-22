@@ -11,8 +11,9 @@ showcase/dist/
 # Logs
 *.log
 
-# Editor (project-local VS Code config; remove this line if you want to share workspace settings)
-.vscode/
+# Editor settings (share only the workspace MCP server configuration)
+.vscode/*
+!.vscode/mcp.json
 
 # Env files
 .env

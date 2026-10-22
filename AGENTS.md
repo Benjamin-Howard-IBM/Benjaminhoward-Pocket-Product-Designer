@@ -138,6 +138,15 @@ Use `designer` first when the right design route is unclear.
 
 Design system references (`carbon-design-system`, `helios-design-system`) are reference skills, not routers. Load one when a task must align to that specific design system; otherwise stay design-system-agnostic.
 
+### Helios (HDS) designs use real components
+
+When a design must use Helios, build it with real HDS Ember components, not lookalikes.
+
+- Before naming any HDS component, argument, icon, or token, verify it with the `helios-design-system` MCP: `search_hds_components`, `get_hds_component`, `search_hds_docs`, `search_hds_icons`, `search_hds_tokens`. Check that results report `source.version` 7.x.
+- Build runnable HDS screens in `hds-playground/` (Ember 6.12 + HDS 7.0.0). See [hds-playground/app/components/format-startup.gts](hds-playground/app/components/format-startup.gts) for the reference pattern.
+- `storybook/stories/wireframes/_hds-primitives.tsx` contains React approximations for gray wireframes only. Do not present them as HDS components.
+- If the MCP is unavailable or HDS has no fitting component, say so. Do not invent APIs or substitute generic HTML/CSS.
+
 Do not merge every design skill into one large response. Route to the smallest useful specialist and keep fidelity matched to the next decision.
 
 ### Dual critique mode
