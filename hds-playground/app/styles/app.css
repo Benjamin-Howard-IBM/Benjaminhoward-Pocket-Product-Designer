@@ -8,6 +8,7 @@
 body {
   margin: 0;
   background: var(--hds-page-color-faint);
+  font-family: var(--hds-typography-font-stack-text);
 }
 
 .playground {
@@ -18,4 +19,282 @@ body {
 
 .playground__status {
   margin-top: 24px;
+}
+
+/* HVD Gateways prototype */
+.gw-main {
+  padding: 24px 32px 64px;
+}
+
+.gw-breadcrumb {
+  margin-bottom: 16px;
+}
+
+.gw-section {
+  margin-top: 24px;
+}
+
+.gw-readable {
+  max-width: 760px;
+}
+
+.gw-wizard {
+  max-width: 720px;
+}
+
+.gw-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gw-stack-tight {
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.gw-card-padded {
+  padding: 20px;
+  background: var(--hds-surface-color-primary);
+}
+
+.gw-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.gw-actions-center {
+  justify-content: center;
+}
+
+.gw-sidenav-sub {
+  padding-left: 32px;
+}
+
+.gw-proto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: flex-end;
+  padding: 12px 24px;
+  border-top: 1px solid var(--hds-border-color-primary);
+  background: var(--hds-surface-color-strong);
+}
+
+.gw-proto > div {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 220px;
+}
+
+.gw-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1px solid var(--hds-border-color-primary);
+  border-radius: var(--hds-border-radius-medium);
+  background: var(--hds-surface-color-primary);
+}
+
+.gw-empty {
+  padding: 48px 0;
+  border: 1px dashed var(--hds-border-color-strong);
+  border-radius: var(--hds-border-radius-medium);
+  background: var(--hds-surface-color-primary);
+}
+
+.gw-steps-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.gw-diagram {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.gw-diagram-region {
+  position: relative;
+  padding: 20px 20px 36px;
+  border: 1px dashed var(--hds-border-color-strong);
+  border-radius: var(--hds-border-radius-medium);
+  background: var(--hds-surface-color-primary);
+}
+
+.gw-diagram-region-site {
+  border-color: var(--hds-foreground-color-action);
+}
+
+.gw-diagram-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gw-diagram-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 96px;
+  padding: 12px;
+  border: 1px solid var(--hds-border-color-primary);
+  border-radius: var(--hds-border-radius-medium);
+  background: var(--hds-surface-color-faint);
+  font-size: 12px;
+  text-align: center;
+}
+
+.gw-diagram-node-gateway {
+  border-color: var(--hds-border-color-warning);
+  background: var(--hds-surface-color-warning);
+}
+
+.gw-diagram-label {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: var(--hds-foreground-color-faint);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.gw-diagram-tunnel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  min-width: 96px;
+}
+
+.gw-diagram-tunnel .gw-diagram-label {
+  position: static;
+  white-space: nowrap;
+}
+
+.gw-diagram-tunnel-line {
+  width: 72px;
+  border-top: 2px dashed var(--hds-foreground-color-warning);
+}
+
+.gw-verify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 32px;
+  border: 1px solid var(--hds-border-color-primary);
+  border-radius: var(--hds-border-radius-medium);
+  background: var(--hds-surface-color-primary);
+  text-align: center;
+}
+
+.gw-verify-failed {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.gw-failures {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gw-failures li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--hds-border-color-faint);
+}
+
+.gw-modal-copy {
+  margin-top: 16px;
+}
+
+.gw-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.gw-dl {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  margin: 12px 0 0;
+}
+
+.gw-dl dt,
+.gw-dl dd {
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid var(--hds-border-color-faint);
+  font-size: 13px;
+}
+
+.gw-dl dt {
+  color: var(--hds-foreground-color-faint);
+  font-size: 12px;
+}
+
+.gw-version {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: var(--hds-border-radius-small);
+  background: var(--hds-surface-color-strong);
+}
+
+.gw-topology {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.gw-topology-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 140px;
+  padding: 16px;
+  border: 1px solid var(--hds-border-color-primary);
+  border-radius: var(--hds-border-radius-medium);
+  background: var(--hds-surface-color-faint);
+  text-align: center;
+}
+
+.gw-topology-link {
+  position: relative;
+  flex: 1;
+  min-width: 80px;
+  border-top: 2px solid var(--hds-border-color-strong);
+}
+
+.gw-topology-link span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  color: var(--hds-foreground-color-faint);
+  font-size: 11px;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.gw-topology-link-degraded {
+  border-top: 2px dashed var(--hds-foreground-color-warning);
+}
+
+.gw-topology-link-not-connected {
+  border-top: 2px dashed var(--hds-foreground-color-disabled);
 }

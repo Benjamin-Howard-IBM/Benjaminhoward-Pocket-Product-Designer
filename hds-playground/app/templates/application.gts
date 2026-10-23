@@ -1,9 +1,9 @@
 import { pageTitle } from 'ember-page-title';
-import FormatStartup from 'hds-playground/components/format-startup';
+import GatewayPrototype from 'hds-playground/components/gateways/gateway-prototype';
 
 <template>
-  {{pageTitle "HDS Playground"}}
-  <FormatStartup />
+  {{pageTitle "HVD Gateways - HDS Playground"}}
+  <GatewayPrototype />
 
   {{outlet}}
 </template>
