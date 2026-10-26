@@ -19,3 +19,6 @@ showcase/dist/
 .env
 .env.local
 .env.*.local
+
+# Local-only third-party reference (not committed)
+skill/vault-enterprise-main/
