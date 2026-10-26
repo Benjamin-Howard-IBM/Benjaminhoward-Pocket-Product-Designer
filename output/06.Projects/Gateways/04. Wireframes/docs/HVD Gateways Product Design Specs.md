@@ -193,6 +193,64 @@ Both must exist for traffic to flow. If S2 has a route but S5 has no matching pe
 
 ---
 
+## Error Conditions by Component
+
+Source: [Connectivity assessment](../../02.%20Strategy/HVD-WireGuard-Gateway-Connectivity-Assessment.md). Code-level findings in that assessment are reported, not confirmed fixes.
+
+### Dataplane gateway (HCP side)
+
+| Error | Signal today | Alert | Screen |
+|---|---|---|---|
+| Provisioning fails (account reservation, Terraform state, AMI lookup, secret load, Infra/Instance/Traffic apply) | Deployment state `failed` | Critical: setup failed, retry or contact support | S2, S3 |
+| Instance does not register over SCADA, or WireGuard not active at verification | Health verdict, logged only. Deploy still promotes | Critical once the workflow gates on health | S3, S8 |
+| Gateway APIs disabled by feature flag | Feature-disabled API error | Info: feature not available | S0, S1 |
+| Second gateway requested for the same HVN | Route table CIDR conflict | Block before submit | S2 |
+| DR replication fails in the secondary region | Warning only; primary still created | Warning: DR not configured | S9 |
+| Second site added | Accepted by API. Client reads only the first peer and ignores the rest silently | Block in UI (one site per gateway in V1) | S8 |
+| Invalid customer or tunnel CIDR on peer create | API validation error | Inline field error | S5 |
+| Tunnel CIDR outside 100.64.0.0/10 | Not validated | None today; add validation | S5 |
+
+### Site gateway (customer side)
+
+No startup telemetry exists today. DAR-001 proposes adding it.
+
+| Error | Signal today | Alert | Screen |
+|---|---|---|---|
+| Container image pull fails | None | Install-step check; portal cannot detect | S6 |
+| Missing NET_ADMIN or SYS_MODULE, host networking off, or kernel below 5.8 | None. S7 sees only no tunnel | Combined diagnostic until DAR-001 | S4, S6, S7 |
+| Service principal wrong or expired | Auth fails; CP sees "never authenticated" | Credential error | S5, S7 |
+| HCP unreachable on HTTPS 443 (DNS, proxy, firewall) | None; client uses cached config if present | Cannot reach HCP | S6, S7 |
+| No cached config and config fetch fails | None; no tunnel starts | Cannot reach HCP | S6, S7 |
+| Offline over 10 minutes, token not renewed | Full re-authentication needed | Session expired; restart client | S9 |
+| Operator kill switch | Config returns `shutdown: true`; client exits | Info: shut down by HCP | S8, S9 |
+
+### Tunnel and routing (both sides)
+
+| Error | Signal today | Alert | Screen |
+|---|---|---|---|
+| UDP 51820 blocked, or DPI or security platform drops the handshake | `ever_connected: false`, no handshake | Network block | S7 |
+| Proxy-only egress | Unsupported; no UDP path | Prerequisite warning | S4 |
+| Last handshake older than 150 s | Peer unhealthy | Warning: site gateway unresponsive | S8, S9 |
+| Tunnel ping fails (for example, host drops ICMP) | Verdict unhealthy though traffic works | Document ICMP requirement | S4, S9 |
+| Customer public IP changes while endpoint IP is pinned | Handshake missing | Endpoint IP mismatch if detectable; otherwise Not connected | S7, S9 |
+| Site CIDR missing or not matching an S2 route | Traffic dropped silently | Validation warning on S5 | S5 |
+| Vault cluster firewall lacks peer CIDR | Tunnel connects; Vault does not respond | None until platform fix | None |
+| IP forwarding off (binary or non-Docker deployment) | Interface reports healthy; forwarded traffic dropped | Prerequisite check; fail startup | S4 |
+| Forwarding rule setup fails | Logged; startup continues | Should fail startup | None |
+| MTU mismatch | Handshake and small requests work; large responses stall | None; add path test | S9 |
+| Key rotation or CIDR edit not applied | Handshake fails; config reported unchanged until restart | Support diagnostic | S9 |
+| Interface name already in use | Startup failure | Error: interface name in use | S6, S7 |
+| Site edit restarts tunnel (about 30 to 40 s, estimate) | None | Confirmation step before save (OQ8) | S9 |
+
+### DR signaling
+
+| Error | Signal today | Alert | Screen |
+|---|---|---|---|
+| Intercepting proxy returns HTTP 200 on the signal file | False failover | None; validate signal body | S9 |
+| Signal endpoints blocked by customer policy | DR never triggers, silently | Add endpoints to prerequisites | S4 |
+
+---
+
 ## Open Questions
 
 | # | Question | Affects | Current stance | Resolution needed by |
